@@ -1,0 +1,32 @@
+/* pages/dividePRecord/dividePRecord.wxss */
+.item{
+  background: white;
+  padding-bottom:16rpx;
+  margin-bottom:16rpx;
+  font-size:26rpx;
+}
+.itemTitle{
+  color: #787878;
+  padding:20rpx 16rpx;
+  border-bottom:1px solid #f1f1f1;
+}
+.time{
+  float: right;
+}
+.itemChild{
+  margin-top:20rpx;
+  padding: 0 16rpx;
+}
+.redcontent{
+  float: right;
+  font-weight: 600;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color: #12e0cf;
+}

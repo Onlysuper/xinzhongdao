@@ -1,0 +1,22 @@
+/* pages/login/login.wxss */
+.main {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+}
+.main image {
+    display: block;
+    width: 90vw;
+    height: 90vh;
+    background: #000;
+    margin: 0 auto;
+}
+.main button {
+    position: fixed;
+    left: 50%;
+    margin-left: -45%;
+    width: 90%;
+    bottom: 20px;
+    font-size: 35rpx;
+    background: #ecb857;
+}

@@ -1,0 +1,129 @@
+/* pages/repair/repair.wxss */
+.textBox{
+  position:relative;
+  width: 92%;
+  margin:30rpx auto;
+  background: white;
+  height: 80rpx;
+  border-radius:10rpx;
+}
+.textInput{
+  width:86%;
+  height: 80rpx;
+  font-size:30rpx;
+  padding-left:16rpx;
+}
+.scanImg{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  right: 20rpx;
+  top:20rpx;
+}
+
+.chooseTitle{
+  width: 92%;
+  font-size:32rpx;
+  color:#787878;
+  margin:10rpx auto; 
+}
+
+.reson{
+  width: 92%;
+  margin:10rpx auto;
+}
+.item{
+  float:left;
+  position: relative;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  background: white;
+  padding: 0 30rpx 0 60rpx;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
+  border-radius: 10rpx;
+}
+.grayDot{
+  position: absolute;
+  width:26rpx;
+  height: 26rpx;
+  text-align: center;
+  line-height: 26rpx;
+  left:16rpx;
+  top:27rpx;
+  border:2px solid #F5F5F5;
+  border-radius: 50%;
+  background:#F5F5F5;
+}
+
+.item.active .grayDot{
+  background:white;
+}
+.grayDot .smallDot{
+  position: absolute;
+  width:20rpx;
+  height: 20rpx;
+  top:50%;
+  left:50%;
+  margin-top:-10rpx;
+  margin-left: -10rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.item.active .grayDot .smallDot{
+  background: #4CA5FF;
+}
+
+
+.detail{
+  width:92%;
+  margin: 20rpx auto;
+  background: white;
+  border-radius: 10rpx;
+}
+
+.textArea{
+  width: 100%;
+  height: 18vh;
+  padding:16rpx;
+  font-size:30rpx;
+  box-sizing: border-box;
+}
+
+.guaranteeBtn{
+  width: 100%;
+}
+.subBtn{
+  width: 92%;
+  margin:20rpx 4%;
+  font-size:30rpx;
+  background: #4CA5FF;
+  color: white;
+  border-radius:5px;
+  margin-bottom:19vh;
+}
+.subBtn::after{
+  border:none;
+}
+
+
+.addImg{
+  width: 92%;
+  margin: 2% 4%; 
+}
+
+.imgBox{
+  position: relative;
+  float:left;
+  width: 180rpx;
+  height: 180rpx;
+  text-align: center;
+  line-height: 180rpx;
+  margin-right: 35rpx;
+  overflow: hidden;
+}
+.addPic{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 5px; 
+}

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/wallet/wallet",
+    "pages/order/order",
+    "pages/orderShow/orderShow",
+    "pages/transaction/transaction",
+    "pages/helpCenter/helpCenter",
+    "pages/recharge/recharge",
+    "pages/rechargeRecord/rechargeRecord",
+    "pages/present/present",
+    "pages/presentRecord/presentRecord",
+    "pages/shopList/shopList",
+    "pages/shopShow/shopShow",
+    "pages/showOrder/showOrder",
+    "pages/success/success",
+    "pages/repair/repair",
+    "pages/management/management",
+    "pages/dividePrsent/dividePrsent",
+    "pages/dividePRecord/dividePRecord",
+    "pages/error/error",
+    "pages/serviceAgreement/serviceAgreement",
+    "pages/login/login"   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#484848",
+    "navigationBarTitleText": "小蜜蜂共享充电",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取地理位置用于发现周围设备"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

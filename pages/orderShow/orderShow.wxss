@@ -1,0 +1,55 @@
+/* pages/orderShow/orderShow.wxss */
+.orderNum{
+  padding:20rpx 16rpx;
+  font-size:28rpx;
+}
+.right{
+  float: right;
+  color: red;
+}
+
+.useDetail{
+  background: white;
+  font-size:28rpx;
+  padding-bottom:20rpx;
+}
+.promiseTitle{
+  text-align: center;
+  color: #787878;
+  padding:20rpx 0;
+}
+
+.smallItem{
+  margin-bottom:20rpx;
+  padding:0 16rpx;
+}
+.gray{
+  color: #989898;
+}
+.rightcontent{
+  float: right;
+}
+
+.rules{
+  position: fixed;
+  width: 100%;
+  bottom:1vh;
+  left:0;
+  font-size:28rpx;
+  padding:20rpx 16rpx;
+  box-sizing: border-box;
+}
+.charging{
+  color: #787878;
+}
+
+.lossBtn{
+  margin: 40rpx 16rpx;
+  background:#4CA5FF;
+  font-size:32rpx;
+  color: white;
+}
+
+.lightBlue{
+   opacity: 0.6;
+}

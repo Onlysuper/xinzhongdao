@@ -1,0 +1,42 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="container">
+  <view class="myBalance clearfix">
+    <view class="left">
+      <view class="balanceTitle">账户余额(元)</view>
+      <view class="balance">￥{{balance}}</view>
+    </view>
+    <view class="right">
+      <view class="balanceTitle">押金(元)</view>
+      <view class="balance">￥{{deposit}}</view>
+    </view>
+  </view>
+
+  <view class="oprarBtn clearfix">
+    <form report-submit="true" class="rechargeForm" data-url="../recharge/recharge" bindsubmit="goNewPage">
+      <button form-type="submit" class="btn recharge" hover-class="lightBtn">
+        充值
+      </button>
+    </form>
+
+    <form report-submit="true" data-url="../present/present" bindsubmit="goNewPage">
+      <button form-type="submit" class="btn present" hover-class="lightBtn">
+        提现
+      </button>
+    </form>
+  </view>
+
+  <view class="list">
+    <view class="listitem" data-url="../rechargeRecord/rechargeRecord" bindtap="goNewPage">
+      <image src="/img/uicon1.png" class="iconleft"></image>
+      <text>充值记录</text>  
+      <image src="/img/arrowRight.png" class="iconright"></image>
+    </view>
+    <view class="listitem" data-url="../presentRecord/presentRecord" bindtap="goNewPage">
+      <image src="/img/uicon1.png" class="iconleft"></image>
+      <text>提现记录</text>  
+      <image src="/img/arrowRight.png" class="iconright"></image>
+    </view>
+  </view>
+
+  
+</view>

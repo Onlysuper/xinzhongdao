@@ -1,0 +1,20 @@
+<!--pages/present/present.wxml-->
+<view class="container">
+  <form report-submit="true" bindsubmit="present">
+    <view class="hasMoney">
+      可提现金额：<text class="money">{{balance}}</text>元
+    </view>
+
+    <view class="inputBox">
+      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="请输入提现金额"></input>
+    </view>
+
+    <view class="tAll" bindtap="presentAll">
+      全部提现
+    </view>
+
+    <button form-type="submit" class="prsentBtn" hover-class="lightBule">
+      提现
+    </button>
+  </form>
+</view>

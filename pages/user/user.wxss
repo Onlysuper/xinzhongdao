@@ -1,0 +1,62 @@
+/* pages/user/user.wxss */
+.info{
+  padding:5vw;
+  display: flex;
+  background: white;
+}
+.userAvatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userNickName{
+  flex: 2;
+  line-height: 120rpx;
+  font-size:46rpx;
+  text-align: right;
+}
+.placeLogin{
+  background: white;
+  text-align: right;
+  line-height: 120rpx;
+  font-size:46rpx;
+}
+
+.myList{
+  margin-top:16rpx;
+}
+
+.listitem{
+  float: left;
+  width: 50%;
+  background: white;
+  border-bottom:1px solid #f1f1f1;
+  box-sizing: border-box;
+}
+.itemBtn{
+  padding:30rpx 0;
+}
+.listitem:nth-child(2n){
+  border-left: 1px solid #f1f1f1;
+}
+.listitem button{
+  font-size:32rpx;
+  background: white;
+}
+.uicon{
+  width: 10vw;
+  height: 10vw;
+  vertical-align: text-top;
+}
+
+.version{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom:15rpx;
+  left:0;
+  line-height: 40rpx;
+  font-size:26rpx;
+  color: #999;
+}

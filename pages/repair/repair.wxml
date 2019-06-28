@@ -1,0 +1,40 @@
+<!--pages/repair/repair.wxml-->
+<view class="container">
+  <view class="textBox">
+    <input type="text" class="textInput" placeholder="请扫描机柜二维码或手动输入二维码编号" value='{{deviceID}}' bindblur="getEquipment"></input>
+    <image src="/img/saoyisao.png" class="scanImg" bindtap="scaner"></image>
+  </view>
+
+  <view class="chooseTitle">
+    请选择保修原因
+  </view>
+  <view class="reson clearfix">
+    <view wx:for="{{reson}}" data-id="{{item.id}}" wx:key="{{index}}" class="{{select==item.id ? 'item active' : 'item'}}" flag="{{item.flag}}" data-reason="{{item.resondes}}" bindtap="selectReson">
+      <view class="grayDot">
+         <view class="smallDot"></view>
+      </view>
+      <text>{{item.resondes}}</text>
+    </view>
+  </view>
+
+  
+  <!--补充说明  -->
+  <view class="chooseTitle">故障描述</view>
+  <view class="detail">
+    <textarea class="textArea" placeholder="请描述故障" bindblur="bindTextAreaBlur"></textarea>
+  </view>
+
+  <view class='addImg clearfix'>
+    <view class='imgBox' hidden='{{photoHidden1}}'>
+      <image src='{{image_photo1}}' class='addPic' data-num="1" bindtap='photograph'></image>
+    </view>
+    <view class='imgBox' hidden='{{photoHidden2}}'>
+      <image src='{{image_photo2}}' class='addPic' data-num="2" bindtap='photograph'></image>
+    </view>
+    <view class='imgBox' hidden='{{photoHidden3}}'>
+      <image src='{{image_photo3}}' class='addPic' data-num="3" bindtap='photograph'></image>
+    </view>
+  </view>
+
+  <form class="guaranteeBtn" bindsubmit="tiJiao" report-submit='true'><button class="subBtn" hover-class='activeBtn' formType="submit">确认报修</button></form>
+</view>

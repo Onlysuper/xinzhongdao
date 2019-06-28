@@ -1,0 +1,26 @@
+<!--pages/shopList/shopList.wxml-->
+<view class="container">
+  <view class="item" wx:for="{{shopList}}" wx:key="{{index}}" data-shopid="{{item.id}}" bindtap="goShow">
+    <view class="itemimg">
+      <image src="/img/test.png"></image>
+    </view>
+    <view class="showInfo">
+      <view class="shopName">{{item.shopName}}</view>
+      <view class="batteryNum">
+        可借：{{item.batteryCount}} 个
+      </view>
+      <view class="address text-ov">
+        地址：{{item.address}}
+      </view>
+    </view>
+  </view>
+
+  <view class="noData" hidden="{{showNoData}}">
+    <image src="/img/null.png" class="nullImg"></image>
+    <view class="noDataTxt">附近还没有附近网点哦~</view>
+  </view>
+
+  <view class="noMore" hidden="{{showMore}}">
+    ———— 已经到底了 ————
+  </view>
+</view>

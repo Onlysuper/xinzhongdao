@@ -1,0 +1,24 @@
+<!--pages/transaction/transaction.wxml-->
+<view class="container">
+  <view class="item" wx:for="{{listData}}" wx:key="{{index}}">
+    <view class="itemTitle">
+      <text>订单号: {{item.orderID}}</text>
+      <text class="time">{{item.time}}</text>
+    </view>
+    <view class="itemChild">
+      <text class="gray">{{item.type}}</text>
+      <text wx:if="{{item.type=='微信充值'}}" class="redcontent green">{{item.money}}元</text>
+      <text wx:if="{{item.type=='充电消费'}}" class="redcontent red">{{item.money}}元</text>
+      <text wx:if="{{item.type=='微信提现'}}" class="redcontent blue">{{item.money}}元</text>
+    </view>
+  </view> 
+
+  <view class="noData" hidden="{{showNoData}}">
+    <image src="/img/null.png" class="nullImg"></image>
+    <view class="noDataTxt">暂无记录~</view>
+  </view>
+
+  <view class="noMore" hidden="{{showMore}}">
+    ———— 已经到底了 ————
+  </view>
+</view>

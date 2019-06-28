@@ -1,0 +1,28 @@
+/* pages/shopList/shopList.wxss */
+.item{
+  display: flex;
+  background: white;
+  padding:20rpx 16rpx;
+  font-size:28rpx;
+  margin-bottom: 16rpx;
+}
+
+.itemimg{
+  width: 18vw;
+  height: 18vw;
+  margin-right: 16rpx;
+}
+.itemimg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.showInfo{
+  flex: 2;
+}
+.shopName{
+  font-weight: 600;
+}
+.batteryNum,.address{
+  margin-top:10rpx;
+}

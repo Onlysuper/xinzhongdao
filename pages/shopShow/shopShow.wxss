@@ -1,0 +1,41 @@
+/* pages/shopShow/shopShow.wxss */
+.banner{
+  position: relative;
+}
+.banner image{
+   width: 100vw;
+  height: 50vw;
+  vertical-align: text-top;
+}
+
+.shopInfo{
+  margin: 20rpx 16rpx; 
+  padding: 16rpx;
+  background: white;
+  font-size:30rpx;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #999;
+}
+
+.shopName{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.businessTime,.address{
+  margin-top:16rpx;
+  font-size:28rpx;
+}
+.gray{
+  color: #888;
+}
+
+.dBtn{
+  margin: 30rpx 16rpx 16rpx;
+  background: #4CA5FF;
+  color: white;
+  line-height: 5vw;
+  padding:25rpx 0;
+  border-radius: 5px;
+  text-align: center;
+}

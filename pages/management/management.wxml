@@ -1,0 +1,46 @@
+<!--pages/management/management.wxml-->
+<view class="container">
+  <view class="searchBox">
+
+    <view class="section">
+      <picker mode="date" value="{{startTime}}" start="2018-10-01" end="2118-10-01" bindchange="bindStartTime">
+        <view class="picker" style="color:{{startColor}}">
+          {{startTime}}
+        </view>        
+      </picker>      
+    </view>
+    <text style="line-height:80rpx;">~</text>
+    <view class="section">
+      <picker mode="date" value="{{endTime}}" start="2018-10-01" end="2118-10-01" bindchange="bindEndTime">
+        <view class="picker" style="color:{{endColor}}">
+          {{endTime}}
+        </view>
+      </picker>
+    </view>
+
+    <button class="searchBtn" hover-class="lightBlue">搜索</button>
+  </view>
+
+  <view class="money">
+    ￥100.00
+  </view>
+
+  <view class="statistics clearfix">
+    <view>总分成：￥151123.25</view>
+    <view>可提现：￥1523.25</view>
+    <view>待审核：￥100.25</view>
+    <view>已提现：￥1523.25</view>
+    <view>设备数：10台</view>
+    <view>分成占比：30%</view>
+  </view>
+
+
+  <view class="button">
+    <form report-submit="true" class="presentRight" data-url="../dividePrsent/dividePrsent" bindsubmit="goPage">
+      <button form-type="submit" class="btn">申请提现</button>
+    </form>
+    <form report-submit="true" data-url="../dividePRecord/dividePRecord" bindsubmit="goPage">
+      <button form-type="submit" class="btn">提现记录</button>
+    </form>
+  </view>
+</view>

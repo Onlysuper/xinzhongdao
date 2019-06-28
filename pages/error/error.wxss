@@ -1,0 +1,42 @@
+/* pages/error/error.wxss */
+.errorBox{
+  text-align: center;
+  padding:8vh 0 2vh;
+}
+.errorImg{
+  width: 40vw;
+  height: 40vw;
+}
+
+.errortitle{
+  padding:0 16rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.errormsg{
+  margin-top:20rpx;
+  padding:0 16rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #787878;
+}
+
+.servicePhone{
+  position: fixed;
+  font-size: 30rpx;
+  width: 100%; 
+  text-align: center;
+  bottom: 32rpx; 
+}
+
+.serNearBtn{
+  margin: 30rpx 16rpx;
+  font-size: 32rpx;
+  background: #4CA5FF;
+  color: white;
+}
+.lightBlue{
+  opacity: 0.6;
+}

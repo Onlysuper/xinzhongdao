@@ -1,0 +1,38 @@
+/* pages/recharge/recharge.wxss */
+page{
+  background: white;
+}
+.promiseTitle{
+  font-size:30rpx;
+  text-align: center;
+  color: #787878;
+  padding:20rpx 0;
+}
+.moneyList{
+  padding: 16rpx;
+}
+.item{
+  float: left;
+  width: 25%;
+  margin-left: 6.22222%;
+  text-align: center;
+  line-height: 90rpx;
+  font-size:32rpx;
+  border:1px solid #DDD;
+  border-radius: 10rpx;
+  margin-bottom:40rpx;
+}
+.item.active{
+  border-color: #4CA5FF;
+  background: #deeaf6;
+}
+
+.formBtn button{
+  margin: 20rpx 16rpx;
+  background: #4CA5FF;
+  color: white;
+  font-size: 32rpx;
+}
+.lightBule{
+  opacity: 0.6;
+}

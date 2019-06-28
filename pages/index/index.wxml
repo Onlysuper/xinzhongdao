@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="moreBox" data-url="../shopList/shopList" bindtap="goNewPage">
+      <image src="/img/more.png" class="more"></image>
+    </view>
+    <view class="searchBox">
+      <button class="search-map" class="searchMapBtn" bindtap="goSearch">
+        搜索位置查找附近的充電寶
+      </button>
+    </view>
+    <view class="avatarBox" data-url="../user/user" bindtap="goNewPage">
+      <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userCenter">個人中心</view>
+    </view>
+    
+  </view>
+  <map id="map" longitude="{{lon}}" latitude="{{lat}}" show-location="true" scale="{{scale}}" controls="{{controls}}" markers="{{markers}}" bindregionchange="regionchange" bindmarkertap="markersTap"></map>
+
+  <cover-image src="/img/scan.png" class="scanBtn" bindtap="scan"></cover-image>
+
+  <!-- <cover-image src="/img/repair.png" class="hicon repairBtn" data-url="../repair/repair" bindtap="goNewPage"></cover-image> -->
+  <cover-image src="/img/help.png" class="hicon serviceBtn" data-url="../helpCenter/helpCenter" bindtap="goNewPage"></cover-image>
+  <cover-image src="/img/reset.png" class="hicon resetBtn" bindtap="mapReset"></cover-image>
+
+
+  <cover-view class="addressBox" data-url="../shopShow/shopShow?shopid={{address.shopId}}" hidden="{{showAddress}}" bindtap="goNewPage">
+    <cover-view class="bannerBox">
+      <cover-image class="banner" src="/img/test.png"></cover-image>
+    </cover-view>
+    <cover-view class="shopInfo">
+      <cover-view class="shopName text-ov">{{address.shopName}}</cover-view>
+      <cover-view class="infoitem">有 {{address.batteryCount}} 个充电宝可用</cover-view>
+      <cover-view class="infoitem text-ov">{{address.address}}</cover-view>
+    </cover-view>
+  </cover-view>
+</view>

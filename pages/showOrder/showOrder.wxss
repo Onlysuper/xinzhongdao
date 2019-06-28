@@ -1,0 +1,83 @@
+/* pages/showOrder/showOrder.wxss */
+.banner{
+  position: relative;
+}
+.shopBanner{
+  width: 100vw;
+  height: 50vw;
+  vertical-align: text-top;
+}
+.shopName{
+  position: absolute;
+  bottom:30rpx;
+  left:20rpx;
+  font-size:32rpx;
+  font-weight: 600;
+  color: white;
+}
+.content{
+  margin:25rpx 16rpx 16rpx;
+  padding-bottom:20rpx;
+  background: white;
+  border-radius: 5px;
+  border:1px solid #c2dbf4;
+  box-shadow: 0 0 6px #c2dbf4;
+}
+.batterySm{
+  font-size: 30rpx;
+  color: #63aefa;
+  text-align: center;
+  margin: 20rpx 0 0;
+}
+
+.times{
+  margin-top:20rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #787878;
+}
+.bload{
+  font-size: 34rpx;
+  font-weight: 600; 
+}
+
+.sm{
+  padding: 16rpx;
+  font-size:28rpx;
+}
+.promiseTitle{
+  color: #484848;
+  font-weight: 600;
+  padding:16rpx 0;
+}
+.smDes{
+  color: #787878;
+}
+.balance{
+  position: fixed;
+  width: 100%;
+  bottom:110rpx;
+  font-size:30rpx;
+  color: #787878;
+  text-align: center;
+}
+.red{
+  font-size:34rpx;
+  color: red;
+  font-weight: 600;
+}
+
+.leaseBtn{
+  position: fixed;
+  width: 100vw;
+  height: 90rpx;
+  line-height: 90rpx;
+  bottom:0;
+  background: #4CA5FF;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 0;
+}
+.lightBlue{
+  opacity: 0.6;
+}

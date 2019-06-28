@@ -1,0 +1,25 @@
+<!--pages/success/success.wxml-->
+<view class="container">
+  <view class="content" hidden="{{showSuccess}}">
+    <view class="title">
+      租借成功
+    </view>    
+    <image vw:if="{{imgs}}" src="{{imgs}}" class="successImg"></image>
+  
+    <view class="returnSm">
+      <view class="returnTitle">
+        {{msg1}} <text style="font-size:36rpx;font-weight:600;color:red;">{{tNum}}</text> {{msg2}}
+      </view>
+    </view>
+
+    
+    <view class="bottomBtn">    
+      <button bindtap="goHome">首页</button>
+      <button class="userCenter" bindtap="goUserCenter">个人中心</button>
+    </view>
+  </view>
+  <view class="loading" hidden="{{!showSuccess}}">
+    <image src="/img/load.gif" class="loadImg"></image>
+    <view class="tiSm">正在弹出充电宝，请勿关闭当前页面</view>
+  </view>
+</view>

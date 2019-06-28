@@ -1,0 +1,26 @@
+<!--pages/shopShow/shopShow.wxml-->
+<view class="container" hidden="{{show}}">
+  <view class="banner">
+    <image src="{{shop.p_Logo}}"></image>
+  </view> 
+
+  <view class="shopInfo">
+    <view class="shopName">
+      {{shop.p_ShopName}}
+    </view>
+
+    
+    <view class="businessTime">
+      <text class="gray">可借充电宝：</text> {{shop.batteryCount}}个
+    </view>
+    <view class="businessTime">
+      <text class="gray">商家电话：</text> {{shop.p_Tel}}
+    </view>
+    <view class="address">
+      <text class="gray">详细地址：</text> {{shop.p_Address}}
+    </view>
+    <view class="dBtn" data-lat="{{shop.p_Lat}}" data-lon="{{shop.p_Lng}}" data-name="{{shop.p_ShopName}}" data-address="{{shop.p_Address}}" bindtap="goDaoHang"> 
+      去这里
+    </view>
+  </view>
+</view>

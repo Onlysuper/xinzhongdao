@@ -1,0 +1,49 @@
+/* pages/present/present.wxss */
+.container{
+  font-size:28rpx;
+  margin: 16rpx;
+  background: white;
+  border-radius: 5px;
+  padding:20rpx 0;
+  box-shadow: 0 0 6px #DDD;
+}
+.hasMoney{
+  line-height: 60rpx;
+  padding: 0 16rpx;
+}
+.money{
+  font-size:32rpx;
+  font-weight: 600;
+  color: red;  
+}
+
+.inputBox{
+  width: 50%;
+  padding:16rpx;
+  margin:0 auto;
+  text-align: center;
+}
+.int{
+  width: 90%;
+  border:1px solid #dedede;
+  border-radius: 5px;
+  padding:14rpx 16rpx;
+  
+}
+.prsentBtn{
+  margin: 20rpx 16rpx;
+  background: #4CA5FF;
+  font-size:30rpx;
+  color: white;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.lightBule{
+  opacity: 0.6;
+}
+
+.tAll{
+  text-align: center;
+  line-height: 70rpx;
+  color: #077aee;
+}

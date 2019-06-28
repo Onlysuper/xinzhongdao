@@ -1,0 +1,50 @@
+/**app.wxss**/
+page{
+  background: #f1f1f1;
+}
+button::after{
+  border:none;
+}
+.hover{ 
+  background: #DDD;
+}
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+	visibility:hidden;
+	line-height: 0;
+	height:0;
+}
+.text-ov {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.noData{
+  padding:150rpx 0 0;
+  text-align: center;
+}
+.nullImg{
+  width: 50vw;
+  height: 50vw;
+}
+.noDataTxt{
+  margin-top:20rpx;
+  font-size:28rpx;
+  color: #999;
+  text-align: center;
+}
+.noMore{
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 80rpx;
+}
+
+button.hover {
+  opacity: .8;
+}
