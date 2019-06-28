@@ -32,7 +32,7 @@
     </cover-view>
     <cover-view class="shopInfo">
       <cover-view class="shopName text-ov">{{address.shopName}}</cover-view>
-      <cover-view class="infoitem">有 {{address.batteryCount}} 个充电宝可用</cover-view>
+      <cover-view class="infoitem">有 {{address.batteryCount}} 個充電寶可用</cover-view>
       <cover-view class="infoitem text-ov">{{address.address}}</cover-view>
     </cover-view>
   </cover-view>

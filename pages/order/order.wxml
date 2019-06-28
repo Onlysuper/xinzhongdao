@@ -2,30 +2,30 @@
 <view class="container">
   <view class="item" wx:for="{{listData}}" wx:key="{{index}}" data-id="{{item.p_OrderID}}" bindtap="goShow" style="background:{{item.p_BorrowState == '已归还' ? 'white' : item.p_BorrowState == '租借中' ? '#e4f5e1' : item.p_BorrowState == '故障单' ? '#f9e4e4' : '#f5e7d1'}}">
     <view class="itemTitle">
-      <text>订单号: {{item.p_OrderID}}</text>
+      <text>訂單號: {{item.p_OrderID}}</text>
       <text class="{{item.p_BorrowState == '已归还' ? 'time' : item.p_BorrowState == '租借中' ? 'time green' : item.p_BorrowState == '故障单' ? 'time red' : 'time orange'}}">{{item.p_BorrowState}}</text>
     </view>
     <view class="itemChild">
-      <text class="gray">租借时间</text>
+      <text class="gray">租借時間</text>
       <text class="redcontent">{{item.p_BorrowTime}}</text>
     </view>
     <view class="itemChild">
-      <text class="gray">租借地点</text>
+      <text class="gray">租借地點</text>
       <text class="redcontent">{{item.p_ShopName}}</text>
     </view>
 
     <view class="itemChild" wx:if="{{item.p_PayPrice}}">
-      <text class="gray">结算金额</text>
+      <text class="gray">結算金額</text>
       <text class="redcontent">{{item.p_PayPrice}}元</text>
     </view>
   </view>
 
   <view class="noData" hidden="{{showNoData}}">
     <image src="/img/null.png" class="nullImg"></image>
-    <view class="noDataTxt">暂无记录~</view>
+    <view class="noDataTxt">暫無記錄~</view>
   </view>
 
   <view class="noMore" hidden="{{showMore}}">
-    ———— 已经到底了 ————
+    ———— 已經到底了 ————
   </view>
 </view>

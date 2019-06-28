@@ -19,18 +19,18 @@
 
   <view class="sm">
     <view class="promiseTitle">
-     计费规则 
+     計費規則 
     </view>
 
     <view class="smDes">
-      <view>押金：{{orderData.yajin}}元</view>
-      <view>免费：{{orderData.mianfei}}分钟</view>
-      <view>计费：超出免费时长，按每小时{{orderData.jifei}}元计费，不满一小时按一小时计算，每天封顶{{orderData.fengding}}元</view>
+      <view>預授權：{{orderData.yajin}}元</view>
+      <view>免費：{{orderData.mianfei}}分鐘</view>
+      <view>計費：超出免費時長，按每小時{{orderData.jifei}}元計費，不滿一小時按一小時計算，每天封頂{{orderData.fengding}}元</view>
     </view>
   </view>
 
   <view class="balance" hidden="{{!showGetingo}}">
-    您当前账户余额为 <text class="red">{{orderData.myyue}}</text> 元
+    您當前賬戶餘額為 <text class="red">{{orderData.myyue}}</text> 元
   </view>
   <form report-submit="true" bindsubmit="lease" hidden="{{showLease}}">
     <button form-type="submit" class="leaseBtn" hover-class="lightBlue">
@@ -38,6 +38,6 @@
     </button>
   </form>
   <button open-type="getUserInfo" bindgetuserinfo="getInfo" class="leaseBtn" hover-class="lightBlue" hidden="{{showGetingo}}">
-    授权登录
+    授權登錄
   </button>
 </view>

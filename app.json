@@ -11,7 +11,7 @@
     "pages/rechargeRecord/rechargeRecord",
     "pages/present/present",
     "pages/presentRecord/presentRecord",
-    "pages/shopList/shopList",
+    "pages/shopList/shopList", 
     "pages/shopShow/shopShow",
     "pages/showOrder/showOrder",
     "pages/success/success",

@@ -2,7 +2,7 @@
 <view class="container">
   <form report-submit="true" bindsubmit="present">
     <view class="hasMoney">
-      可提现金额：<text class="money">{{balance}}</text>元
+      可提現金額：<text class="money">{{balance}}</text>元
     </view>
 
     <view class="inputBox">
@@ -10,11 +10,11 @@
     </view>
 
     <view class="tAll" bindtap="presentAll">
-      全部提现
+      全部提現
     </view>
 
     <button form-type="submit" class="prsentBtn" hover-class="lightBule">
-      提现
+      提現
     </button>
   </form>
 </view>

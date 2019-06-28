@@ -14,12 +14,12 @@
 
     
     <view class="bottomBtn">    
-      <button bindtap="goHome">首页</button>
-      <button class="userCenter" bindtap="goUserCenter">个人中心</button>
+      <button bindtap="goHome">首頁</button>
+      <button class="userCenter" bindtap="goUserCenter">個人中心</button>
     </view>
   </view>
   <view class="loading" hidden="{{!showSuccess}}">
     <image src="/img/load.gif" class="loadImg"></image>
-    <view class="tiSm">正在弹出充电宝，请勿关闭当前页面</view>
+    <view class="tiSm">正在彈出充電寶，請勿關閉當前頁面</view>
   </view>
 </view>

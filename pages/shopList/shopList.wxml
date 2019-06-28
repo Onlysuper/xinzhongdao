@@ -17,10 +17,10 @@
 
   <view class="noData" hidden="{{showNoData}}">
     <image src="/img/null.png" class="nullImg"></image>
-    <view class="noDataTxt">附近还没有附近网点哦~</view>
+    <view class="noDataTxt">附近還沒有網點哦~</view>
   </view>
 
   <view class="noMore" hidden="{{showMore}}">
-    ———— 已经到底了 ————
+    ———— 已經到底了 ————
   </view>
 </view>

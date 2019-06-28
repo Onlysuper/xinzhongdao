@@ -1,6 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class="main">
     <image mode="aspectFill" src="../../img/loginBg.png"></image>
-    <button hover-class="hover" type="warn">微信用户快速登录</button>
+    <button hover-class="hover" type="warn">微信用戶快速登錄</button>
 </view>
 

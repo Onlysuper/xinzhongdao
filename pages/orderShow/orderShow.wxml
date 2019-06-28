@@ -1,46 +1,46 @@
 <!--pages/orderShow/orderShow.wxml-->
 <view class="container">
   <view class="orderNum">
-    订单号: {{orderDetail.p_OrderID}}
+    訂單號: {{orderDetail.p_OrderID}}
     <text class="right">{{orderDetail.p_BorrowState}}</text>
   </view>
 
   <view class="useDetail">
     <view class="promiseTitle">
-      ———— 使用详情 ————
+      ———— 使用詳情 ————
     </view>
 
     <view class="smallItem">
-      <text class="gray">设备编号</text>
+      <text class="gray">設備編號</text>
       <text class="rightcontent">{{orderDetail.p_DeviceID}}</text>
     </view>
     <view class="smallItem">
-      <text class="gray">电池编号</text>
+      <text class="gray">電池編號</text>
       <text class="rightcontent">{{orderDetail.p_BatteryID}}</text>
     </view>
 
     <view class="smallItem">
-      <text class="gray">租借时间</text>
+      <text class="gray">租借時間</text>
       <text class="rightcontent">{{orderDetail.p_BorrowTime}}</text>
     </view>
     <view class="smallItem">
-      <text class="gray">租借地点</text>
+      <text class="gray">租借地點</text>
       <text class="rightcontent">{{orderDetail.p_ShopName}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_ReturnTime}}">
-      <text class="gray">归还时间</text>
+      <text class="gray">歸還時間</text>
       <text class="rightcontent">{{orderDetail.p_ReturnTime}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_ReturnShopName}}">
-      <text class="gray">归还地点</text>
+      <text class="gray">歸還地點</text>
       <text class="rightcontent">{{orderDetail.p_ReturnShopName}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_UseTime}}">
-      <text class="gray">使用时长</text>
+      <text class="gray">使用時長</text>
       <text class="rightcontent">{{orderDetail.p_UseTime}}分钟</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_PayPrice}}">
-      <text class="gray">结算费用</text>
+      <text class="gray">結算費用</text>
       <text class="rightcontent">{{orderDetail.p_PayPrice}}元</text>
     </view>
   </view>
@@ -51,11 +51,11 @@
 
   <view class="rules">
     <view class="promiseTitle">
-      ———— 计费规则 ————
+      ———— 計費規則 ————
     </view>
 
     <view class="charging">
-      租借前{{orderDetail.p_FreeTime}}分钟免费，超过{{orderDetail.p_FreeTime}}分钟按{{orderDetail.p_Price}}元每小时计费，不满1小时按1小时计费；每天封顶{{orderDetail.p_Price_Max}}元。
+      租借前{{orderDetail.p_FreeTime}}分鐘免費，超過{{orderDetail.p_FreeTime}}分鐘按{{orderDetail.p_Price}}元每小時計費，不滿1小時按1小時計費；每天封頂{{orderDetail.p_Price_Max}}元。
     </view>
   </view>
 </view>

@@ -14,7 +14,7 @@
 
     <view class="noData" hidden="{{showNoData}}">
       <image src="/img/null.png" class="nullImg"></image>
-      <view class="noDataTxt">暂无记录~</view>
+      <view class="noDataTxt">暫無記錄~</view>
     </view>
     <!-- <view class="noMore" hidden="{{showMore}}">
       ———— 已经到底了 ————
@@ -27,8 +27,8 @@
   </view>
 
   <view class="opearBtn">
-    <button class="repair" bindtap="goRepair">故障反馈</button>
-    <button class="service" bindtap="callService">联系客服</button>
-    <button class="service" bindtap="goAgreement">服务协议</button>
+    <button class="repair" bindtap="goRepair">故障反饋</button>
+    <button class="service" bindtap="callService">聯繫客服</button>
+    <button class="service" bindtap="goAgreement">服務協議</button>
   </view>
 </view>
