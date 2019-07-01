@@ -6,17 +6,29 @@
     </view>
     <view class="searchBox">
       <button class="search-map" class="searchMapBtn" bindtap="goSearch">
-        搜索位置查找附近的充電寶
+        {{language.homepage_search}}
       </button>
+    </view>
+    <view class="section">
+        <!-- <view class="section__title">{{language.language}}</view> -->
+        <picker style="width: 100rpx;height:100%;font-size: 22rpx;display: flex;align-items: center;" bindchange="changeLanguage" value="{{langIndex}}" range="{{languages}}">
+          <view class="picker">
+              <!-- {{language.language}} -->
+              {{languages[langIndex]}}
+          </view>
+        </picker>
     </view>
     <view class="avatarBox" data-url="../user/user" bindtap="goNewPage">
       <view class="avatar">
         <open-data type="userAvatarUrl"></open-data>
       </view>
-      <view class="userCenter">個人中心</view>
+      <view class="userCenter">
+          {{language.homepage_user}}
+        <!-- 個人中心 -->
+      </view>
     </view>
-    
   </view>
+  
   <map id="map" longitude="{{lon}}" latitude="{{lat}}" show-location="true" scale="{{scale}}" controls="{{controls}}" markers="{{markers}}" bindregionchange="regionchange" bindmarkertap="markersTap"></map>
 
   <cover-image src="/img/scan.png" class="scanBtn" bindtap="scan"></cover-image>

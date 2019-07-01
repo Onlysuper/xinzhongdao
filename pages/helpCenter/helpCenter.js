@@ -12,15 +12,23 @@ Page({
     listData: [],
     showNoData: true,
     showMore: true,
-    answers:[]
+    answers:[],
+    langs:{},
   },
 
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     page = 1;
     this.getData();
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
   },
   getData: function () {
     wx.showNavigationBarLoading();

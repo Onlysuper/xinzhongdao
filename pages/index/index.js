@@ -6,6 +6,9 @@ var that;
 var externalCode;
 Page({
   data: {
+    language: '',
+    languages: ['简体中文', '繁体中文'],
+    langIndex: 0,
     userInfo: {},
     lat: 39.908,
     lon: 116.3972,
@@ -28,6 +31,12 @@ Page({
     ]
   },
   onLoad: function (options) {
+    // 语言start
+    this.setData({
+      langIndex: wx.getStorageSync('langIndex')
+    });
+    this.setLanguage();
+    // 语言end
     if (options.q){
       externalCode = options.q;
     };
@@ -37,6 +46,29 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     });
+  },
+  setLanguage() {
+    this.setData ({
+      language: wx.I18n.getLanguage()
+    });
+  },
+  changeLanguage(e) {
+    let index = e.detail.value;
+    this.setData({	// (1)
+      langIndex: index
+    });
+    wx.I18n.setLocaleByIndex(index);
+    this.setLanguage();
+    wx.setStorage({
+      key: 'langIndex',
+      data: this.data.langIndex
+    })
+  },
+  bindPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    // this.setData({
+    //   index: e.detail.value
+    // })
   },
   //获取用户信息
   getUserInfo: function(callback) {

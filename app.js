@@ -1,3 +1,13 @@
+
+import locales from './utils/locales.js';
+import I18n from './utils/i18n.js';
+
+I18n.registerLocale(locales);
+
+//当前语言设置为用户上一次选择的语言，如果是第一次使用，则调用 T.setLocaleByIndex(0) 将语言设置成中文
+I18n.setLocaleByIndex(wx.getStorageSync('langIndex') || 0);
+
+wx.I18n = I18n;
 //app.js
 App({
   onLaunch: function () {

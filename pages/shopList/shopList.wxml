@@ -7,20 +7,21 @@
     <view class="showInfo">
       <view class="shopName">{{item.shopName}}</view>
       <view class="batteryNum">
-        可借：{{item.batteryCount}} 个
+        可借：{{item.batteryCount}} {{langs.unit}}
       </view>
       <view class="address text-ov">
-        地址：{{item.address}}
+        {{langs.adress}}：{{item.address}}
       </view>
     </view>
   </view>
 
   <view class="noData" hidden="{{showNoData}}">
     <image src="/img/null.png" class="nullImg"></image>
-    <view class="noDataTxt">附近還沒有網點哦~</view>
+    <view class="noDataTxt">
+      {{langs.shopListPG_noshop}}</view>
   </view>
 
   <view class="noMore" hidden="{{showMore}}">
-    ———— 已經到底了 ————
+    ———— {{langs.toend}} ————
   </view>
 </view>

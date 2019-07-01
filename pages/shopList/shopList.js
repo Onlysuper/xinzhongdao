@@ -9,6 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    langs:{},
     shopList:[],
     showNoData:true,
     showMore:true
@@ -20,6 +21,12 @@ Page({
   onLoad: function (options) {
     page = 1;
     this.getData();
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
   },
   getData:function(){
     wx.showNavigationBarLoading();
