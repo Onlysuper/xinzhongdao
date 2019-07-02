@@ -7,17 +7,22 @@ Page({
    * 页面的初始数据
    */
   data: {
+    langs:{},
     startTime: "请选择开始时间",
     endTime: "请选择结束时间",
     startColor: "#999",
     endColor: "#999"
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
   },
   bindStartTime: function (e) {
     this.setData({

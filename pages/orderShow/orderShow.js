@@ -12,7 +12,8 @@ Page({
     orderDetail:{},
     showBtn:true,
     btnMsg: "",
-    methods:""
+    methods:"",
+    langs:{},
   },
 
   /**
@@ -21,8 +22,13 @@ Page({
   onLoad: function (options) {
     orderid = options.orderid;
     this.getData();
+    this.setLanguage();
   },
-
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+  },
   getData:function(){
     wx.showNavigationBarLoading();
 

@@ -7,9 +7,9 @@
   <view class="errormsg" wx:if="{{msg1}}">{{msg1}}</view>
   <view class="errormsg" style="margin-top:4rpx;" wx:if="{{deviceID}}">{{deviceID}}</view>
   <button class="serNearBtn" hover-class="lightBlue" bindtap="goNear">
-    點擊回到首頁
+    {{langs.errorPG_gohome}}
   </button>
   <view class="servicePhone" bindtap="callService">
-    客服熱線：<text style="color:#79B2F0;">{{servicPhone}}</text>
+      {{langs.errorPG_servicephone}}：<text style="color:#79B2F0;">{{servicPhone}}</text>
   </view>
 </view>

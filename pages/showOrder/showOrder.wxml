@@ -19,25 +19,25 @@
 
   <view class="sm">
     <view class="promiseTitle">
-     計費規則 
+      {{langs.showorderPG_amountrule}}
     </view>
 
     <view class="smDes">
-      <view>預授權：{{orderData.yajin}}元</view>
-      <view>免費：{{orderData.mianfei}}分鐘</view>
-      <view>計費：超出免費時長，按每小時{{orderData.jifei}}元計費，不滿一小時按一小時計算，每天封頂{{orderData.fengding}}元</view>
+      <view>{{langs.showorderPG_yrq}}：{{orderData.yajin}}元</view>
+      <view>{{langs.showorderPG_costfree}}：{{orderData.mianfei}}分鐘</view>
+      <view>{{langs.showorderPG_counter}}：超出免費時長，按每小時{{orderData.jifei}}元計費，不滿一小時按一小時計算，每天封頂{{orderData.fengding}}元</view>
     </view>
   </view>
 
   <view class="balance" hidden="{{!showGetingo}}">
-    您當前賬戶餘額為 <text class="red">{{orderData.myyue}}</text> 元
+    {{langs.showorderPG_balance}} <text class="red">{{orderData.myyue}}</text> 元
   </view>
   <form report-submit="true" bindsubmit="lease" hidden="{{showLease}}">
     <button form-type="submit" class="leaseBtn" hover-class="lightBlue">
-      立即租借
+      {{langs.showorderPG_borrow}}
     </button>
   </form>
   <button open-type="getUserInfo" bindgetuserinfo="getInfo" class="leaseBtn" hover-class="lightBlue" hidden="{{showGetingo}}">
-    授權登錄
+    {{langs.showorderPG_login}}
   </button>
 </view>

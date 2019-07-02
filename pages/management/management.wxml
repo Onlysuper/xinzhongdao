@@ -26,12 +26,12 @@
   </view>
 
   <view class="statistics clearfix">
-    <view>總分成：￥151123.25</view>
-    <view>可提現：￥1523.25</view>
-    <view>待審核：￥100.25</view>
-    <view>已提現：￥1523.25</view>
-    <view>設備數：10台</view>
-    <view>分成佔比：30%</view>
+    <view>{{langs.managementPG_zfc}}：￥151123.25</view>
+    <view>{{langs.managementPG_ktx}}：￥1523.25</view>
+    <view>{{langs.managementPG_dsh}}：￥100.25</view>
+    <view>{{langs.managementPG_ytx}}：￥1523.25</view>
+    <view>{{langs.managementPG_sbs}}：10台</view>
+    <view>{{langs.managementPG_fczb}}：30%</view>
   </view>
 
 

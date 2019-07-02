@@ -13,7 +13,8 @@ Page({
     show:true,
     showGetingo:true,
     showLease:true,
-    orderData:{}    
+    orderData:{},
+    langs:{} 
   },
 
   /**
@@ -24,8 +25,13 @@ Page({
     qrcode = options.id;
     // this.getAuthorize();
     this.isShowData();
+    this.setLanguage();
   },
-
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+  },
   isShowData:function(){
     var timer;
     if (wx.getStorageSync('openId')) {

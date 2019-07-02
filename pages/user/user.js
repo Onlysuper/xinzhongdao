@@ -9,7 +9,8 @@ Page({
    */
   data: {
     showNickName:true,
-    showShop:true
+    showShop:true,
+    langs:{},
   },
 
   /**
@@ -18,6 +19,12 @@ Page({
   onLoad: function (options) {
     that = this;
     that.getAuthorize();
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
   },
   getAuthorize:function(){
     wx.getSetting({

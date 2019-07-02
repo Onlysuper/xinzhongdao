@@ -7,7 +7,7 @@
     <view class="userNickName">
       <open-data type="userNickName" hidden="{{showNickName}}"></open-data>
       <button open-type="getUserInfo" class="placeLogin" bindgetuserinfo="getInfo" hidden="{{!showNickName}}">
-        未登錄
+        {{langs.userPG_notlogged}}
       </button>
     </view>
   </view>
@@ -16,34 +16,36 @@
     <view class="listitem">
       <button open-type="getUserInfo" class="itemBtn" bindgetuserinfo="getInfo" data-url="../wallet/wallet">
         <view><image src="/img/uicon0.png" class="uicon"></image></view>
-        <view class="itemTxt">我的錢包</view>
+        <view class="itemTxt">
+          {{langs.userPG_mywallet}}
+         </view>
       </button>      
     </view>
 
     <view class="listitem">
       <button open-type="getUserInfo" class="itemBtn" bindgetuserinfo="getInfo" data-url="../order/order">
         <view><image src="/img/uicon1.png" class="uicon"></image></view>
-        <view class="itemTxt">租借訂單</view>
+        <view class="itemTxt">{{langs.userPG_rentorder}}</view>
       </button>      
     </view>
     <view class="listitem">
       <button open-type="getUserInfo" class="itemBtn" bindgetuserinfo="getInfo" data-url="../transaction/transaction">
         <view><image src="/img/uicon2.png" class="uicon"></image></view>
-        <view class="itemTxt">交易明細</view>
+        <view class="itemTxt">{{langs.userPG_transaction}}</view>
       </button>      
     </view>
 
     <view class="listitem">
       <button open-type="getUserInfo" class="itemBtn" bindgetuserinfo="getInfo" data-url="../helpCenter/helpCenter">
         <view><image src="/img/uicon3.png" class="uicon"></image></view>
-        <view class="itemTxt">使用幫助</view>
+        <view class="itemTxt">{{langs.userPG_instructions}}</view>
       </button>      
     </view>
 
     <view class="listitem" hidden="{{showShop}}">
       <button open-type="getUserInfo" class="itemBtn" bindgetuserinfo="getInfo" data-url="../management/management">
         <view><image src="/img/more.png" class="uicon"></image></view>
-        <view class="itemTxt">商戶合作</view>
+        <view class="itemTxt">{{langs.userPG_cooperation}}</view>
       </button>      
     </view>
   </view>

@@ -2,7 +2,7 @@
 <view class="container">
   <form report-submit="true" bindsubmit="present">
     <view class="hasMoney">
-      可提現分成：<text class="money">{{balance}}</text>元
+      {{langs.devidePG_ktx}}：<text class="money">{{balance}}</text>元
     </view>
 
     <view class="inputBox">
@@ -10,11 +10,11 @@
     </view>
 
     <view class="tAll" bindtap="presentAll">
-      全部提現
+        {{langs.devidePG_allwithdrawal}}
     </view>
 
     <button form-type="submit" class="prsentBtn" hover-class="lightBule">
-      提現
+        {{langs.devidePG_withdrawal}}
     </button>
   </form>
 </view>

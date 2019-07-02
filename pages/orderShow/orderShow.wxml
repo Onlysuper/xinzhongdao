@@ -1,30 +1,30 @@
 <!--pages/orderShow/orderShow.wxml-->
 <view class="container">
   <view class="orderNum">
-    訂單號: {{orderDetail.p_OrderID}}
+    {{langs.ordershowPG_number}}: {{orderDetail.p_OrderID}}
     <text class="right">{{orderDetail.p_BorrowState}}</text>
   </view>
 
   <view class="useDetail">
     <view class="promiseTitle">
-      ———— 使用詳情 ————
+      {{langs.ordershowPG_detail}}
     </view>
 
     <view class="smallItem">
-      <text class="gray">設備編號</text>
+      <text class="gray">{{langs.ordershowPG_deviceid}}</text>
       <text class="rightcontent">{{orderDetail.p_DeviceID}}</text>
     </view>
     <view class="smallItem">
-      <text class="gray">電池編號</text>
+      <text class="gray">{{langs.ordershowPG_battery}}</text>
       <text class="rightcontent">{{orderDetail.p_BatteryID}}</text>
     </view>
 
     <view class="smallItem">
-      <text class="gray">租借時間</text>
+      <text class="gray">{{langs.ordershowPG_borrowtime}}</text>
       <text class="rightcontent">{{orderDetail.p_BorrowTime}}</text>
     </view>
     <view class="smallItem">
-      <text class="gray">租借地點</text>
+      <text class="gray">{{langs.ordershowPG_borrowlocal}}</text>
       <text class="rightcontent">{{orderDetail.p_ShopName}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_ReturnTime}}">

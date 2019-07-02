@@ -2,7 +2,7 @@
 <view class="container">
   <view class="item" wx:for="{{listData}}" wx:key="{{index}}">
     <view class="itemTitle">
-      <text>訂單號: {{item.orderID}}</text>
+      <text>{{langs.dividePG_ordernum}}: {{item.orderID}}</text>
       <text class="time">{{item.time}}</text>
     </view>
     <view class="itemChild">
@@ -15,10 +15,10 @@
 
   <view class="noData" hidden="{{showNoData}}">
     <image src="/img/null.png" class="nullImg"></image>
-    <view class="noDataTxt">暫無記錄~</view>
+    <view class="noDataTxt">{{langs.nodata}}</view>
   </view>
 
   <view class="noMore" hidden="{{showMore}}">
-    ———— 已經到底了 ————
+      {{langs.toend}}
   </view>
 </view>

@@ -14,7 +14,7 @@
         <picker style="width: 100rpx;height:100%;font-size: 22rpx;display: flex;align-items: center;" bindchange="changeLanguage" value="{{langIndex}}" range="{{languages}}">
           <view class="picker">
               <!-- {{language.language}} -->
-              {{languages[langIndex]}}
+              {{languages[langIndex] || '选择语言'}}
           </view>
         </picker>
     </view>

@@ -8,14 +8,20 @@ Page({
    */
   data: {
     balance: "",
-    prsentMoney: ""
+    prsentMoney: "",
+    langs:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
   },
   getData: function () {
     wx.showNavigationBarLoading();

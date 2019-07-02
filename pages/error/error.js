@@ -10,13 +10,19 @@ Page({
     msg:"",
     msg1:"",
     deviceID:"",
-    servicPhone:""
+    servicPhone:"",
+    langs:{},
   },
-
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setLanguage();
     var getMore = options.msg1;
     var m1 = "",m2 = "";
     if (getMore){

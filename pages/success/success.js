@@ -11,14 +11,20 @@ Page({
     tNum: "",
     msg1: "",
     msg2: "",
-    imgs: ""
+    imgs: "",
+    langs:{} 
   },
-
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.monitorBattery(options.orderid, options.formId);
+    this.setLanguage();
   },
 
 
