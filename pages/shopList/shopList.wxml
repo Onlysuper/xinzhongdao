@@ -7,7 +7,7 @@
     <view class="showInfo">
       <view class="shopName">{{item.shopName}}</view>
       <view class="batteryNum">
-        可借：{{item.batteryCount}} {{langs.unit}}
+        {{langs.canborrow}}：{{item.batteryCount}} {{langs.unit}}
       </view>
       <view class="address text-ov">
         {{langs.adress}}：{{item.address}}

@@ -7,7 +7,7 @@ var externalCode;
 Page({
   data: {
     language: '',
-    languages: ['简体中文', '繁体中文'],
+    languages: ['简体中文', '繁體中文','English'],
     langIndex: 0,
     userInfo: {},
     lat: 39.908,

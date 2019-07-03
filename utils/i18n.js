@@ -1,7 +1,7 @@
 let I18n = {
   locale : null,
   locales : {},           //语言包内容
-  langCode : ['zh_jian','zh_fan'] 
+  langCode : ['zh_jian','zh_fan','en'] 
 }
  
 I18n.registerLocale = function(locales){
