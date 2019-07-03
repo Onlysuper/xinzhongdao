@@ -8,6 +8,9 @@ var imgNum = 0;
 var pic = "";
 var formID;
 Page({
+  langs:{
+    
+  },
   /**
    * 页面的初始数据
    */
@@ -48,7 +51,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
   },
   selectReson: function (e) {
     var num = e.currentTarget.dataset.id;

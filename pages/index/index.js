@@ -6,9 +6,9 @@ var that;
 var externalCode;
 Page({
   data: {
-    language: '',
+    langs: '',
     languages: ['简体中文', '繁體中文','English'],
-    langIndex: 0,
+    langIndex: 1,
     userInfo: {},
     lat: 39.908,
     lon: 116.3972,
@@ -49,7 +49,7 @@ Page({
   },
   setLanguage() {
     this.setData ({
-      language: wx.I18n.getLanguage()
+      langs: wx.I18n.getLanguage()
     });
   },
   changeLanguage(e) {

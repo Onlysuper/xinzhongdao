@@ -9,7 +9,7 @@ Page({
   data: {
     langs:{},
     startTime: "请选择开始时间",
-    endTime: "请选择结束时间",
+    endTime: "请选择结束时间", 
     startColor: "#999",
     endColor: "#999"
   },
