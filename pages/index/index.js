@@ -138,8 +138,6 @@ Page({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
           //已授权
-          console.log("已授权");
-          
           if (!wx.getStorageSync("isLogin")){
             app.loginApp(function(){
               that.getUserInfo(function(ret){

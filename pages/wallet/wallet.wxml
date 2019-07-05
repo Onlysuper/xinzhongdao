@@ -12,7 +12,7 @@
   </view>
 
   <view class="oprarBtn clearfix">
-    <form report-submit="true" class="rechargeForm" data-url="../recharge/recharge" bindsubmit="goNewPage">
+    <form report-submit="true"  data-url="../recharge/recharge" bindsubmit="goNewPage">
       <button form-type="submit" class="btn recharge" hover-class="lightBtn">
         {{langs.walletPG_recharge}}
       </button>

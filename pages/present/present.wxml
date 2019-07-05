@@ -2,19 +2,20 @@
 <view class="container">
   <form report-submit="true" bindsubmit="present">
     <view class="hasMoney">
-      可提現金額：<text class="money">{{balance}}</text>元
+      {{langs.presentPG_ktx}}：<text class="money">{{balance}}</text>{{langs.money_unit}}
     </view>
 
     <view class="inputBox">
-      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="请输入提现金额"></input>
+      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="{langs.presentPG_placeholder}}"></input>
     </view>
 
     <view class="tAll" bindtap="presentAll">
-      全部提現
+        {{langs.presentPG_qbtx}}
     </view>
 
     <button form-type="submit" class="prsentBtn" hover-class="lightBule">
-      提現
+        {{langs.presentPG_tx}}
     </button>
   </form>
 </view>
+ 

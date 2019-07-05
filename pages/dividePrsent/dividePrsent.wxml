@@ -2,11 +2,11 @@
 <view class="container">
   <form report-submit="true" bindsubmit="present">
     <view class="hasMoney">
-      {{langs.devidePG_ktx}}：<text class="money">{{balance}}</text>元
+      {{langs.devidePG_ktx}}：<text class="money">{{balance}}</text>{{langs.money_unit}}
     </view>
 
     <view class="inputBox">
-      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="请输入提现金额"></input>
+      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="{{langs.devidePG_Moneywithdrawal}}"></input>
     </view>
 
     <view class="tAll" bindtap="presentAll">

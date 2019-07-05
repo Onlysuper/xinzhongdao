@@ -13,15 +13,25 @@ Page({
    */
   data: {
     moneyList:[],
-    payMoney:""
+    payMoney:"",
+    langs:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setLanguage();
     var getformId = options.formId;
     this.getData(getformId);
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['present_TITLE'],
+    })
   },
   getData:function(fid){
     wx.showNavigationBarLoading();

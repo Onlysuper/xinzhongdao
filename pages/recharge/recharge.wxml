@@ -1,18 +1,18 @@
 <!--pages/recharge/recharge.wxml-->
 <view class="container">
   <view class="promiseTitle" wx:if="{{moneyList.length>0}}">
-    ———— 请选择充值金额 ————
+    ———— {{langs.rechargePG_recharge}} ————
   </view>
 
   <view class="moneyList clearfix">
     <view wx:for="{{moneyList}}" wx:key="{{index}}" class="{{item == payMoney ? 'item active' : 'item'}}" data-money="{{item}}" bindtap="chooseMoney">
-      {{item}}元
+      {{item}} {{langs.rechargePG_wxpay}}{{langs.money_unit}}
     </view>
   </view>
 
   <form report-submit="true" class="formBtn" bindsubmit="payTap" wx:if="{{moneyList.length>0}}">
     <button form-type="submit" hover-class="lightBule">
-      微信支付
+      {{langs.rechargePG_wxpay}}
     </button>
   </form>
 </view>
