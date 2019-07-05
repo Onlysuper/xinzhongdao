@@ -18,6 +18,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['serviceAgreement_TITLE'],
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,33 +1,37 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="header">
-    <view class="moreBox" data-url="../shopList/shopList" bindtap="goNewPage">
-      <image src="/img/more.png" class="more"></image>
-    </view>
-    <view class="searchBox">
-      <button class="search-map" class="searchMapBtn" bindtap="goSearch">
-        {{langs.homepage_search}}
-      </button>
-    </view>
-   
-    <view class="avatarBox" data-url="../user/user" bindtap="goNewPage">
-      <view class="avatar">
-        <open-data type="userAvatarUrl"></open-data>
+    <view class="header">
+      <view class="moreBox" data-url="../shopList/shopList" bindtap="goNewPage">
+        <image src="/img/more.png" class="more"></image>
       </view>
-      <view class="userCenter">
-          {{langs.homepage_user}}
-        <!-- 個人中心 -->
+      <view class="searchBox">
+        <button class="search-map" class="searchMapBtn" bindtap="goSearch">
+          {{langs.homepage_search}}
+        </button>
       </view>
-    </view>
-    <view class="section">
-      <picker style="width: 100rpx;height:100%;font-size: 22rpx;display: flex;align-items: center;" bindchange="changeLanguage" value="{{langIndex}}" range="{{languages}}">
-        <view class="picker">
-            {{languages[langIndex] || '选择语言'}}
+    
+      <view class="avatarBox" data-url="../user/user" bindtap="goNewPage">
+        <view class="avatar">
+          <open-data type="userAvatarUrl"></open-data>
         </view>
-      </picker>
+        <view class="userCenter">
+            {{langs.homepage_user}}
+          <!-- 個人中心 -->
+        </view>
+      </view>
+      <view class="section">
+          <!-- <picker-view style="width: 100rpx;height:100%;font-size: 22rpx;display: flex;align-items: center;" indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{langIndex}}" bindchange="changeLanguage">
+            <picker-view-column wx:for="{{languages}}">
+              <view>{{item}}</view>
+            </picker-view-column>
+          </picker-view> -->
+        <picker style="width: 100rpx;height:100%;font-size: 22rpx;display: flex;align-items: center;" bindchange="changeLanguage" value="{{langIndex}}" range="{{languages}}">
+          <view class="picker">
+              {{languages[langIndex]}}
+          </view>
+        </picker>
+    </view>
   </view>
-  </view>
-  
   <map id="map" longitude="{{lon}}" latitude="{{lat}}" show-location="true" scale="{{scale}}" controls="{{controls}}" markers="{{markers}}" bindregionchange="regionchange" bindmarkertap="markersTap"></map>
 
   <cover-image src="/img/scan.png" class="scanBtn" bindtap="scan"></cover-image>

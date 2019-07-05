@@ -23,6 +23,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['management_TITLE'],
+    })
   },
   bindStartTime: function (e) {
     this.setData({

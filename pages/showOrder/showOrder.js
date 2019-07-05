@@ -31,6 +31,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['showOrder_TITLE'],
+    })
   },
   isShowData:function(){
     var timer;

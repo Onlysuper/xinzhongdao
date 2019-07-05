@@ -25,6 +25,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['user_TITLE'],
+    })
   },
   getAuthorize:function(){
     wx.getSetting({

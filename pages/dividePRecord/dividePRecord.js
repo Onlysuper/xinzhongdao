@@ -25,6 +25,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['dividePRecord_TITLE'],
+    })
   },
   getData: function () {
     wx.showNavigationBarLoading();

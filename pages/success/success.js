@@ -25,6 +25,9 @@ Page({
   onLoad: function (options) {
     this.monitorBattery(options.orderid, options.formId);
     this.setLanguage();
+    wx.setNavigationBarTitle({
+      title: this.data.langs['success_TITLE'],
+    })
   },
 
 

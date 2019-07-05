@@ -17,6 +17,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['error_TITLE'],
+    })
   },
   /**
    * 生命周期函数--监听页面加载

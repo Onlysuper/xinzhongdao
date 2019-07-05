@@ -8,7 +8,7 @@ Page({
   data: {
     langs: '',
     languages: ['简体中文', '繁體中文','English'],
-    langIndex: 1,
+    langIndex: '1',
     userInfo: {},
     lat: 39.908,
     lon: 116.3972,
@@ -33,7 +33,7 @@ Page({
   onLoad: function (options) {
     // 语言start
     this.setData({
-      langIndex: wx.getStorageSync('langIndex')
+      langIndex: wx.getStorageSync('langIndex')||"1"
     });
     this.setLanguage();
     // 语言end
@@ -51,6 +51,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['index_TITLE'],
+    })
   },
   changeLanguage(e) {
     let index = e.detail.value;

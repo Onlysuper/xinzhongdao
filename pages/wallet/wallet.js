@@ -22,6 +22,9 @@ Page({
     this.setData ({
       langs: wx.I18n.getLanguage()
     });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['wallet_TITLE'],
+    })
   },
   getData:function(){
     var that = this;
