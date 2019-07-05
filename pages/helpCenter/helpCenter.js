@@ -22,8 +22,8 @@ Page({
    */
   onLoad: function (options) {
     page = 1;
-    this.getData();
     this.setLanguage();
+    this.getData();
   },
   setLanguage() {
     this.setData ({
@@ -37,12 +37,12 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "Help/HelpList.asp?page=" + page,
+      url: app.globalData.publicUrl + "Help/HelpList.asp?page=" + page+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: {
-        
+        // language:"语言",
       },
       method: "POST",
       dataType: "json",
@@ -136,12 +136,12 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "Help/HelpDetail.asp?id=" + id,
+      url: app.globalData.publicUrl + "Help/HelpDetail.asp?id=" + id+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: {
-
+        // language:"语言"
       },
       method: "POST",
       dataType: "json",

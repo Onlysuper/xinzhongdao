@@ -74,7 +74,7 @@ Page({
   getData1:function(){
     wx.showNavigationBarLoading();
     wx.request({
-      url: app.globalData.publicUrl + "Borrow/showInfo.asp?id=" + qrcode,
+      url: app.globalData.publicUrl + "Borrow/showInfo.asp?id=" + qrcode+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -82,7 +82,8 @@ Page({
       data: {
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")
+        latitude: wx.getStorageSync("lat"),
+        // language:"语言",
       },
       dataType: "json",
       success: function (res) {
@@ -113,7 +114,7 @@ Page({
   getData:function(){
     wx.showNavigationBarLoading();
     wx.request({
-      url: app.globalData.publicUrl + "Borrow/Check.asp?id=" + qrcode,
+      url: app.globalData.publicUrl + "Borrow/Check.asp?id=" + qrcode+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -121,7 +122,8 @@ Page({
       data:{
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")
+        latitude: wx.getStorageSync("lat"),
+        // language:"语言",
       },
       dataType: "json",
       success: function (res) {
@@ -213,7 +215,7 @@ Page({
       mask: true
     });
     wx.request({
-      url: app.globalData.publicUrl + 'Borrow/Borrow.asp?id=' + qrcode,
+      url: app.globalData.publicUrl + 'Borrow/Borrow.asp?id=' + qrcode+'&language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -222,7 +224,8 @@ Page({
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
-        formId: formId
+        formId: formId,
+        // language:"语言"
       },
       dataType: "json",
       success: function (res) {
@@ -251,7 +254,7 @@ Page({
       mask: true
     }) ; 
     wx.request({
-      url: app.globalData.publicUrl + 'Borrow/BorrowPay.asp?id=' + qrcode,
+      url: app.globalData.publicUrl + 'Borrow/BorrowPay.asp?id=' + qrcode+'&language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -259,7 +262,8 @@ Page({
       data: {
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")        
+        latitude: wx.getStorageSync("lat"),
+        // language:"语言"   
       },
       dataType: "json",
       success: function (res) {
@@ -304,7 +308,7 @@ Page({
   //检查是否付款成功
   checkPay:function(oid){
     wx.request({
-      url: app.globalData.publicUrl + 'Borrow/BorrowPayFinish.asp',
+      url: app.globalData.publicUrl + 'Borrow/BorrowPayFinish.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -315,7 +319,8 @@ Page({
         latitude: wx.getStorageSync("lat"),
         payment:"ok",
         out_trade_no: oid,
-        formId: formId
+        formId: formId,
+        // language:"语言"
       },
       dataType: "json",
       success: function (res) {

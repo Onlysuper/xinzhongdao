@@ -33,7 +33,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "List/TixianList.asp?page=" + page,
+      url: app.globalData.publicUrl + "List/TixianList.asp?page=" + page+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },

@@ -37,14 +37,15 @@ Page({
 
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "List/OrderDetail.asp?id=" + orderid,
+      url: app.globalData.publicUrl + "List/OrderDetail.asp?id=" + orderid+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: {
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")
+        latitude: wx.getStorageSync("lat"),
+        // language:"语言"
       },
       method: "POST",
       dataType: "json",
@@ -193,7 +194,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "List/CloseOrder.asp",
+      url: app.globalData.publicUrl + "List/CloseOrder.asp"+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -201,7 +202,8 @@ Page({
         id: orderid,
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")
+        latitude: wx.getStorageSync("lat"),
+        // language:"语言"
       },
       method: "POST",
       dataType: "json",

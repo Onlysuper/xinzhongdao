@@ -191,7 +191,7 @@ Page({
   },
   subSave: function () {
     wx.request({
-      url: app.globalData.publicUrl + 'Repair/repair.asp',      
+      url: app.globalData.publicUrl + 'Repair/repair.asp'+'?language='+this.data['langs']['lang_type'],      
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -204,7 +204,8 @@ Page({
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
-        formId: formID
+        formId: formID,
+        // language:"语言",
       },
       dataType: 'json',
       responseType: 'text',

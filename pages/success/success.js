@@ -47,7 +47,7 @@ Page({
     var that = this;
     wx.showNavigationBarLoading();
     wx.request({
-      url: app.globalData.publicUrl + 'Borrow/BorrowFinish.asp',
+      url: app.globalData.publicUrl + 'Borrow/BorrowFinish.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -57,7 +57,8 @@ Page({
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
         orderid: orderid,
-        formId: formId
+        formId: formId,
+        // language:"语言"
       },
       dataType: "json",
       success: function (res) {

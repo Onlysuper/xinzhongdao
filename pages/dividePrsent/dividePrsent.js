@@ -30,7 +30,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + 'Tixian/TixianSM.asp',
+      url: app.globalData.publicUrl + 'Tixian/TixianSM.asp?'+'language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -38,7 +38,8 @@ Page({
       data: {
         openID: wx.getStorageSync("openId"),
         longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")
+        latitude: wx.getStorageSync("lat"),
+        // language:"语言",
       },
       dataType: "json",
       success: function (res) {
@@ -89,7 +90,7 @@ Page({
             mask: true
           });
           wx.request({
-            url: app.globalData.publicUrl + 'Tixian/Tixian.asp',
+            url: app.globalData.publicUrl + 'Tixian/Tixian.asp?'+'&language='+this.data['langs']['lang_type'],
             header: {
               "Content-Type": "application/x-www-form-urlencoded"
             },
@@ -99,7 +100,8 @@ Page({
               longitude: wx.getStorageSync("lon"),
               latitude: wx.getStorageSync("lat"),
               money: pMoney,
-              formId: e.detail.formId
+              formId: e.detail.formId,
+              // language:"语言",
             },
             dataType: "json",
             success: function (res) {

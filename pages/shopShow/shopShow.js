@@ -21,9 +21,12 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "Shop/ShopDetail.asp?id=" + shopid,
+      url: app.globalData.publicUrl + "Shop/ShopDetail.asp?id=" + shopid+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        // language:"语言",
       },
       method: "POST",
       dataType: "json",

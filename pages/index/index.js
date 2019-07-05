@@ -67,12 +67,6 @@ Page({
       data: this.data.langIndex
     })
   },
-  bindPickerChange: function(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    // this.setData({
-    //   index: e.detail.value
-    // })
-  },
   //获取用户信息
   getUserInfo: function(callback) {
     // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -88,8 +82,6 @@ Page({
       }
     });
   },
-  
-
   //获取地理位置
   getLocation:function(){
     wx.getLocation({
@@ -162,11 +154,12 @@ Page({
     wx.request({
       url: app.globalData.publicUrl + 'map/map.asp',
       header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded?'+'language='+this.data['langs']['lang_type']
       },
       data: {
         longitude: lons,
-        latitude: lats
+        latitude: lats,
+        // language:"语言"
       },
       method: "POST",
       dataType: "json",

@@ -1,5 +1,6 @@
 export default {
   'zh_jian' : {
+    'lang_type':"zh_jian",
     'dividePRecord_TITLE':"分成提现记录",
     'dividePrsent_TITLE':"分成提现",
     'error_TITLE':"错误",
@@ -84,6 +85,7 @@ export default {
     'rechargePG_wxpay':'微信支付'
   },
   'zh_fan' : {
+    'lang_type':"zh_fan",
     'dividePRecord_TITLE':"分成提現記錄",
     'dividePrsent_TITLE':"分成提現",
     'error_TITLE':"錯誤",
@@ -176,6 +178,7 @@ export default {
     'rechargePG_wxpay':'微信支付'
   },
   'en' : {
+    'lang_type':"en",
     'dividePRecord_TITLE':"withdrawal records",
     'dividePrsent_TITLE':"Royalty withdrawal",
     'error_TITLE':"error",

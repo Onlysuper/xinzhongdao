@@ -37,7 +37,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiSM.asp',
+      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiSM.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -47,6 +47,7 @@ Page({
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
         formId: fid
+        // language:"语言",
       },
       dataType: "json",
       success:function(res){
@@ -78,7 +79,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + 'Chongzhi/Chongzhi.asp',
+      url: app.globalData.publicUrl + 'Chongzhi/Chongzhi.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -88,7 +89,8 @@ Page({
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
         formId: e.detail.formId,
-        money: that.data.payMoney
+        money: that.data.payMoney,
+        // language:"语言",
       },
       dataType: "json",
       success: function (res) {
@@ -124,7 +126,7 @@ Page({
 
   payCheck:function(orderid){
     wx.request({
-      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiCheck.asp',
+      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiCheck.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -135,6 +137,7 @@ Page({
         latitude: wx.getStorageSync("lat"),
         payment: "ok",
         out_trade_no: orderid
+        // language:"语言"
       },
       dataType: "json",
       success: function (res) {
