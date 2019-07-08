@@ -75,7 +75,7 @@ Page({
     var that = this;
     wx.showNavigationBarLoading();
     wx.request({
-      url: app.globalData.publicUrl + 'User/Info.asp',
+      url: app.globalData.publicUrl + 'User/Info.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },

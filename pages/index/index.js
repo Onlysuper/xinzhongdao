@@ -6,8 +6,8 @@ var that;
 var externalCode;
 Page({
   data: {
-    langs: '',
-    languages: ['简体中文', '繁體中文','English'],
+    langs: {},
+    languages: ['简体中文', '繁體中文'],
     langIndex: '1',
     userInfo: {},
     lat: 39.908,

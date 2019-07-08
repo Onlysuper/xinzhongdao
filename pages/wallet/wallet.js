@@ -23,7 +23,7 @@ Page({
       langs: wx.I18n.getLanguage()
     });
     wx.setNavigationBarTitle({
-      title: this.data.langs['wallet_TITLE'],
+      title: this.data.langs['userPG_mywallet'],
     })
   },
   getData:function(){
