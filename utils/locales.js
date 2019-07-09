@@ -112,6 +112,8 @@ export default {
     'submitting':'提交中...',
     'loginfail':'登录失败，请重试',
     'reject_resault':'拒绝授权将无法租借充电宝哦',
+    'battery_lost':'充电宝已遗失',
+    'repair_broken':'修复故障',
   },
   'zh_fan' : {
     'lang_type':"zh_fan",
@@ -234,6 +236,8 @@ export default {
     'submitting':'提交中...',
     'loginfail':'登錄失敗，請重試',
     'reject_resault':'拒絕授權將無法租借充電寶哦',
+    'battery_lost':'充電寶已遺失',
+    'repair_broken':'修復故障',
   },
   'en' : {
     'lang_type':"en",

@@ -50,22 +50,21 @@ Page({
       method: "POST",
       dataType: "json",
       success: function (res) {
-        console,log("订单详情："+JSON.stringify(res));
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
           that.setData({
             orderDetail: res.data.data
           });
-          if (res.data.data.p_BorrowState == "租借中"){
+          if (res.data.data.p_BorrowStateCode == "1"){
             that.setData({
               showBtn: false,
-              btnMsg: "充电宝已遗失",
+              btnMsg: that.data.langs['battery_lost'],
               methods: "finishOrder"
             });
-          } else if (res.data.data.p_BorrowState == "故障单"){
+          } else if (res.data.data.p_BorrowStateCode == "2"){
             that.setData({
               showBtn: false,
-              btnMsg: "修复故障",
+              btnMsg: that.data.langs['repair_broken'],
               methods: "repairOrder"
             });
           }else{
