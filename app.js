@@ -46,7 +46,6 @@ App({
               callback && callback();
             } else {
               wx.$toast({
-                title: '温馨提示',
                 content: 'Int.asp:' + res.data.msg,
                 showCancel: false
               })

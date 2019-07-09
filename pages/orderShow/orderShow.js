@@ -99,11 +99,11 @@ Page({
   },1000),
 
   repairAjax:function(){
+    var that = this;
     wx.showLoading({
-      title: '修复中...',
+      title: that.data.langs['repairing'],
       mask: true
     });
-    var that = this;
     wx.request({
       url: app.globalData.publicUrl + "List/FixOrder.asp?act=fix",
       header: {
