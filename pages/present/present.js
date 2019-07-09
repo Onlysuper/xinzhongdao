@@ -88,7 +88,7 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.showLoading({
-            title: '提现中...',
+            title: that.data['langs']['showorderPG_withdraw'],
             mask: true
           });
           wx.request({

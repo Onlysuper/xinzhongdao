@@ -33,9 +33,9 @@ Page({
   },
   getData:function(){
     wx.showNavigationBarLoading();
-    var that = this;
+    var _this = this;
     wx.request({
-      url: app.globalData.publicUrl + "Shop/shopList.asp?page="+page+'&language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + "Shop/shopList.asp?page="+page+'&language='+_this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -51,18 +51,18 @@ Page({
           maxPage = res.data.maxpage;
           if(res.data.total > 0){
             if(page == 1){
-              that.setData({
+              _this.setData({
                 shopList: []
               });
             };
-            var myData = that.data.shopList.concat(res.data.data);
-            that.setData({
+            var myData = _this.data.shopList.concat(res.data.data);
+            _this.setData({
               shopList: myData,
               showNoData: true,
               showMore: true
             });            
           }else{
-            that.setData({
+            _this.setData({
               shopList: [],
               showNoData: false,
               showMore: true

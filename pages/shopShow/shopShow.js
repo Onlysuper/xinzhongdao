@@ -24,7 +24,7 @@ Page({
       langs: wx.I18n.getLanguage()
     });
     wx.setNavigationBarTitle({
-      title: this.data.langs['repair_TITLE'],
+      title: this.data.langs['shopShow_TITLE'],
     })
   },
   getData:function(shopid){

@@ -34,10 +34,11 @@ Page({
     })
   },
   getData:function(fid){
+   
     wx.showNavigationBarLoading();
-    var that = this;
+    var _this = this;
     wx.request({
-      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiSM.asp'+'?language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiSM.asp'+'?language='+_this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -53,13 +54,13 @@ Page({
       success:function(res){
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
-          that.setData({
+          _this.setData({
             moneyList: res.data.price.split(","),
             payMoney: res.data.price.split(",")[0]
           })
         } else {
           wx.showModal({
-            title: '温馨提示',
+            title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })
@@ -76,13 +77,10 @@ Page({
 
   //点击充值
   payTap: util.throttle(function(e){
-    var that = this;
-    // return false;
+    var _this = this;
     wx.showNavigationBarLoading();
-   
-    // return false;
     wx.request({
-      url: app.globalData.publicUrl + 'Chongzhi/Chongzhi.asp'+'?language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + 'Chongzhi/Chongzhi.asp'+'?language='+_this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -92,13 +90,12 @@ Page({
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
         formId: e.detail.formId,
-        money: that.data.payMoney,
+        money: _this.data.payMoney,
         // language:"语言",
       },
       dataType: "json",
       success: function (res) {
         wx.hideNavigationBarLoading();
-        console.log("充值："+JSON.stringify(res));
         var orderId = res.data.data.out_trade_no;
         if (res.data.status){
           wx.requestPayment({
@@ -109,14 +106,14 @@ Page({
             paySign: res.data.data.paySign,
             success: function(result){
               if (result.errMsg == "requestPayment:ok") {
-                that.payCheck(orderId);
+                _this.payCheck(orderId);
               }
             },
             fail: function(err){
-              console.log(JSON.stringify(err));
               if (err.errMsg == "requestPayment:fail cancel"){
                 wx.showToast({
                   title: "取消充值",
+                  title: _this.data.langs['warn_title'],
                   icon: "none"
                 })
               }
@@ -128,8 +125,9 @@ Page({
   },1000),
 
   payCheck:function(orderid){
+    let _this=this;
     wx.request({
-      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiCheck.asp'+'?language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + 'Chongzhi/ChongzhiCheck.asp'+'?language='+_this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -147,14 +145,14 @@ Page({
         // console.log("付款成功之后：" + JSON.stringify(res));
         if(res.data.code == 1){
           wx.showToast({
-            title: '充值成功',
+            title: `${_this.data['langs']['walletPG_recharge']}成功`,
             icon: 'success',
             duration: 2000
           });
           setTimeout(function () { wx.navigateBack({});},1000);          
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title: `${_this.data['langs']['warn_title']}`,
             content: res.data.msg,
             showCancel: false
           })

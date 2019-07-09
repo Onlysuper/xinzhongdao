@@ -30,7 +30,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + 'Tixian/TixianSM.asp?'+'language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + 'Tixian/TixianSM.asp?'+'language='+that.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -85,8 +85,9 @@ Page({
       content: '是否确定提现' + pMoney + "元？",
       success(res) {
         if (res.confirm) {
+          // 'showorderPG_withdraw':'提現中...',
           wx.showLoading({
-            title: '提现中...',
+            title: that.data['langs']['showorderPG_withdraw'],
             mask: true
           });
           wx.request({
