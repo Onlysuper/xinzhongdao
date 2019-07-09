@@ -17,7 +17,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['presentRecord_TITLE'],
+    })
   },
   getData: function () {
     wx.showNavigationBarLoading();

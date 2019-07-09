@@ -10,14 +10,23 @@ Page({
   data: {
     listData: [],
     showNoData: true,
-    showMore: true
+    showMore: true,
+    langs:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setLanguage();
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['rechargeRecord_TITLE'],
+    })
   },
   getData: function () {
     wx.showNavigationBarLoading();
@@ -85,6 +94,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.setLanguage();
     page = 1;
     this.getData();
   },

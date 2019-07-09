@@ -30,7 +30,7 @@ Page({
       langs: wx.I18n.getLanguage()
     });
     wx.setNavigationBarTitle({
-      title: this.data.langs['present_TITLE'],
+      title: this.data.langs['recharge_TITLE'],
     })
   },
   getData:function(fid){
@@ -78,6 +78,16 @@ Page({
   payTap: util.throttle(function(e){
     wx.showNavigationBarLoading();
     var that = this;
+
+    wx.showToast({
+      title: this.data['langs']['lang_type'],
+      icon: "none"
+    })
+    wx.showToast({
+      title: app.globalData.publicUrl + 'Chongzhi/Chongzhi.asp'+'?language='+this.data['langs']['lang_type'],
+      icon: "none"
+    })
+    // return false;
     wx.request({
       url: app.globalData.publicUrl + 'Chongzhi/Chongzhi.asp'+'?language='+this.data['langs']['lang_type'],
       header: {

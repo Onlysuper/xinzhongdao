@@ -1,41 +1,39 @@
 // pages/repair/repair.js
-var subReason = "无法充电";
+var subReason = wx.I18n.getLanguage()['repairPG_reson_0'];
 var myMask = "";
 var equipmentNum = "";
 var app = getApp();
 var imgArr = [];
 var imgNum = 0;
-var pic = "";
+var pic = ""; 
 var formID;
 Page({
-  langs:{
-    
-  },
   /**
    * 页面的初始数据
    */
   data: {
+    langs:{},
     select: 0,
     reson: [
       {
         id: 0,
-        resondes: "无法充电"
+        resondes: wx.I18n.getLanguage()['repairPG_reson_0']
       },
       {
         id: 1,
-        resondes: "借出失败"
+        resondes: wx.I18n.getLanguage()['repairPG_reson_1']
       },
       {
         id: 2,
-        resondes: "归还失败"
+        resondes: wx.I18n.getLanguage()['repairPG_reson_2']
       },
       {
         id: 3,
-        resondes: "主机故障"
+        resondes: wx.I18n.getLanguage()['repairPG_reson_3']
       },
       {
         id: 4,
-        resondes: "订单出错"
+        resondes: wx.I18n.getLanguage()['repairPG_reson_4']
       },
     ],
     deviceID: "",

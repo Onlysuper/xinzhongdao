@@ -16,7 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setLanguage();
+    // wx.showModal({
+    //   title: '进来了1',
+    // })
   },
   setLanguage() {
     this.setData ({
@@ -82,6 +84,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    // wx.showModal({
+    //   title: '进来了1',
+    // })
+    this.setLanguage();
     this.getData();
   },
 

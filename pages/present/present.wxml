@@ -6,7 +6,7 @@
     </view>
 
     <view class="inputBox">
-      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="{langs.presentPG_placeholder}}"></input>
+      <input type="number" name="money" class="int" value="{{prsentMoney}}" placeholder="{{langs.presentPG_placeholder}}"></input>
     </view>
 
     <view class="tAll" bindtap="presentAll">
