@@ -75,6 +75,16 @@ Page({
     };
     var _this = this;
     wx.showNavigationBarLoading();
+    // wx.$apis.postUserInfo(
+    //   `?language=${_this.data['langs']['lang_type']}`
+    // )({
+    //   openID: wx.getStorageSync("openId"),
+    //   longitude: wx.getStorageSync("lon"),
+    //   latitude: wx.getStorageSync("lat")})
+    //   .then(res=>{
+    //   console.log(res);
+    // })
+    // return false;
     wx.request({
       url: app.globalData.publicUrl + 'User/Info.asp'+'?language='+_this.data['langs']['lang_type'],
       header: {

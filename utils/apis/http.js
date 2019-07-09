@@ -20,8 +20,16 @@ function HTTP(obj, config) {
 			},
 			success: (res) => {
 				// 状态码为200
-                wx.hideNavigationBarLoading();
-				
+				wx.hideNavigationBarLoading();
+				console.log(res);
+				if(res.code=='1'){
+					return res.data;
+				}else{
+					wx.showModal({
+						title: '有问题',
+						showCancel: false
+					})
+				}
 			},fail: (err) => {
                 wx.hideNavigationBarLoading();
                 wx.showModal({
@@ -46,6 +54,16 @@ export default{
 			url:baseurl+url,
 			data,
 			method: "POST"
-		}, config);
+		});
+	},
+	POSTFORM(baseurl,url, data) {
+		return HTTP({
+			url:baseurl+url,
+			data,
+			header: {
+				"Content-Type": "application/x-www-form-urlencoded"
+			},
+			method: "POST"
+		});
 	}
 }
