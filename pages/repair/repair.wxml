@@ -35,5 +35,7 @@
     </view>
   </view>
 
-  <form class="guaranteeBtn" bindsubmit="tiJiao" report-submit='true'><button class="subBtn" hover-class='activeBtn' formType="submit">確認保修</button></form>
+  <form class="guaranteeBtn" bindsubmit="tiJiao" report-submit='true'><button class="subBtn" hover-class='activeBtn' formType="submit">
+      {{langs.repairPG_confirm}}
+  </button></form>
 </view>

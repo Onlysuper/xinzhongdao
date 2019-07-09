@@ -242,7 +242,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      reson: [
+        {
+          id: 0,
+          resondes: wx.I18n.getLanguage()['repairPG_reson_0']
+        },
+        {
+          id: 1,
+          resondes: wx.I18n.getLanguage()['repairPG_reson_1']
+        },
+        {
+          id: 2,
+          resondes: wx.I18n.getLanguage()['repairPG_reson_2']
+        },
+        {
+          id: 3,
+          resondes: wx.I18n.getLanguage()['repairPG_reson_3']
+        },
+        {
+          id: 4,
+          resondes: wx.I18n.getLanguage()['repairPG_reson_4']
+        },
+      ]
+    })
   },
 
   /**

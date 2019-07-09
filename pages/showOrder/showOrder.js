@@ -87,7 +87,6 @@ Page({
       },
       dataType: "json",
       success: function (res) {
-        console.log("未授权："+JSON.stringify(res));
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
           that.setData({
@@ -127,7 +126,6 @@ Page({
       },
       dataType: "json",
       success: function (res) {
-        console.log("已授权：" + JSON.stringify(res));
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
           that.setData({
@@ -210,8 +208,9 @@ Page({
 
   //余额充足时租借
   enough: function(){
+    // 租借中
     wx.showLoading({
-      title: '租借中...',
+      title: `${this.data.langs['showorderPG_renting']}`,
       mask: true
     });
     wx.request({
@@ -229,7 +228,6 @@ Page({
       },
       dataType: "json",
       success: function (res) {
-        // console.log("余额充足："+JSON.stringify(res));
         if(res.data.code == 1){
           that.monitorBattery(res.data.orderID); //进入电池弹出监听
         }else{
@@ -249,8 +247,9 @@ Page({
 
   //余额不足时
   lessMoney:function(e){ 
+    // 充值中
     wx.showLoading({
-      title: '充值中...',
+      title: `${this.data.langs['showorderPG_recharging']}`,
       mask: true
     }) ; 
     wx.request({
@@ -307,6 +306,7 @@ Page({
 
   //检查是否付款成功
   checkPay:function(oid){
+    let _this = this;
     wx.request({
       url: app.globalData.publicUrl + 'Borrow/BorrowPayFinish.asp'+'?language='+this.data['langs']['lang_type'],
       header: {
@@ -328,7 +328,7 @@ Page({
         wx.hideLoading();
         if(res.data.code == 1){
           wx.showLoading({
-            title: '租借中...',
+            title: _this.data.langs['showOrder_TITLE'],
             mask: true
           });
           that.monitorBattery(res.data.orderid);

@@ -1,9 +1,10 @@
 <!--pages/order/order.wxml-->
 <view class="container">
-  <view class="item" wx:for="{{listData}}" wx:key="{{index}}" data-id="{{item.p_OrderID}}" bindtap="goShow" style="background:{{item.p_BorrowState == '已归还' ? 'white' : item.p_BorrowState == '租借中' ? '#e4f5e1' : item.p_BorrowState == '故障单' ? '#f9e4e4' : '#f5e7d1'}}">
+  <view class="item" wx:for="{{listData}}" wx:key="{{index}}" data-id="{{item.p_OrderID}}" bindtap="goShow" 
+  style="background:{{item.p_BorrowStateCode== '0' ? 'white' : item.p_BorrowStateCode== '1' ? '#e4f5e1' : item.p_BorrowStateCode == '2' ? '#f9e4e4' : '#f5e7d1'}}">
     <view class="itemTitle">
       <text>{{langs.orderPG_number}}: {{item.p_OrderID}}</text>
-      <text class="{{item.p_BorrowState == '已归还' ? 'time' : item.p_BorrowState == '租借中' ? 'time green' : item.p_BorrowState == '故障单' ? 'time red' : 'time orange'}}">{{item.p_BorrowState}}</text>
+      <text class="{{item.p_BorrowStateCode == '0' ? 'time' : item.p_BorrowStateCode == '1' ? 'time green' : item.p_BorrowStateCode == '2' ? 'time red' : 'time orange'}}">{{item.p_BorrowState}}</text>
     </view>
     <view class="itemChild">
       <text class="gray">{{langs.orderPG_borrowtime}}</text>
