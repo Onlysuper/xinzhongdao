@@ -66,7 +66,6 @@ App({
       },
       dataType: "json",
       success: res => {
-        console.log("注册用户："+JSON.stringify(res));
         if (res.data.code == 1) {
           wx.setStorageSync("isLogin", true);
         }else if(res.data.code == 999){

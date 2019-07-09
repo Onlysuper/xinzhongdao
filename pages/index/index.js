@@ -66,18 +66,11 @@ Page({
       key: 'langIndex',
       data: this.data.langIndex
     })
-    wx.chooseLocation({
-      success: res => {
-        that.setData({
-          lon: res.longitude,
-          lat: res.latitude,
-        });
-        that.getShop(res.latitude, res.longitude);
-      },
-      fail: function (err) {
-        console.log(err);
-      }
-    })
+    that.setData({
+      address: '',
+      showAddress:true,
+      markers: []
+    });
   },
   //获取用户信息
   getUserInfo: function(callback) {
