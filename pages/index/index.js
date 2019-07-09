@@ -270,6 +270,9 @@ Page({
 
   //头部搜索
   goSearch: function () {
+    wx.showModal({
+      title: '温馨提示'
+    })
     wx.chooseLocation({
       success: res => {
         that.setData({

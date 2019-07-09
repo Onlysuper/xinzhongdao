@@ -20,8 +20,8 @@ Page({
    */
   onLoad: function (options) {
     page = 1;
-    this.getData();
     this.setLanguage();
+    this.getData();
   },
   setLanguage() {
     this.setData ({
