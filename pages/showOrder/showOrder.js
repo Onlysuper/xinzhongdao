@@ -282,14 +282,14 @@ Page({
               // console.log("付款成功：" + JSON.stringify(result));
               if (result.errMsg == "requestPayment:ok") {
                 //充值成功
-                that.checkPay(out_trade_no);
+                _this.checkPay(out_trade_no);
               }
             },
             fail: function (err) {
               wx.hideLoading();
               if (err.errMsg == "requestPayment:fail cancel") {
                 wx.showToast({
-                  title: "取消充值",
+                  title:_this.data.langs['no_recharge'],
                   icon: "none"
                 })
               }

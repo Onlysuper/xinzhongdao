@@ -66,6 +66,7 @@ Page({
   //提现
   present: util.throttle(function(e){
     let _this = this;
+    console.log(_this.data);
     var pMoney = e.detail.value.money;//提现金额
     if (pMoney <= 0){
       wx.$toast({

@@ -115,6 +115,8 @@ export default {
     'battery_lost':'充电宝已遗失',
     'repair_broken':'修复故障',
     'repairing':'修复中',
+    'no_recharge':'取消充值',
+
   },
   'zh_fan' : {
     'lang_type':"zh_fan",
@@ -191,7 +193,7 @@ export default {
     'devidePG_allwithdrawal':'全部提現',
     'devidePG_Moneywithdrawal':'請輸入提現金額',
     'devidePG_withdrawal':'提現',
-    'devidePG_sureprice':'請輸入正確的金額',
+    'devidePG_sureprice':'請輸入正確的提現金額',
     'errorPG_gohome':"點擊回到首頁",
     'errorPG_servicephone':"客服熱線",
     'orderPG_number':"訂單號",
@@ -240,6 +242,7 @@ export default {
     'battery_lost':'充電寶已遺失',
     'repair_broken':'修復故障',
     'repairing':'修復中',
+    'no_recharge':'取消充值',
   },
   'en' : {
     'lang_type':"en",
@@ -356,5 +359,10 @@ export default {
     'submitting':'提交中...',
     'loginfail':'登錄失敗，請重試',
     'reject_resault':'拒絕授權將無法租借充電寶哦',
+    'battery_lost':'充電寶已遺失',
+    'repair_broken':'修復故障',
+    'repairing':'修復中',
+    'no_recharge':'取消充值',
+    'devidePG_sureprice':'请输入正确的提现金额',
   }
 }

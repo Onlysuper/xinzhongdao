@@ -112,8 +112,7 @@ Page({
             fail: function(err){
               if (err.errMsg == "requestPayment:fail cancel"){
                 wx.showToast({
-                  title: "取消充值",
-                  title: _this.data.langs['warn_title'],
+                  title: _this.data.langs['no_recharge'],
                   icon: "none"
                 })
               }
