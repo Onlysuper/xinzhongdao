@@ -32,6 +32,7 @@ Page({
     ]
   },
   onLoad: function (options) {
+
     // 语言start
     this.setData({
       langIndex: wx.getStorageSync('langIndex')||"1"
@@ -147,7 +148,6 @@ Page({
           }
         } else {
           //未授权
-          console.log("未授权");
           wx.setStorageSync("isLogin", false);
         }
       }
@@ -246,7 +246,7 @@ Page({
             url: '../showOrder/showOrder?id=' + deviceID,
           });
         }else{
-          wx.showModal({
+          wx.$toast({
             title: '温馨提示',
             content: res.errMsg,
             showCancel: false
@@ -291,6 +291,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
   onShow: function () {
+   
     this.getAuthorize();
   },
   /**

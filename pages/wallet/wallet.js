@@ -16,9 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.showModal({
-    //   title: '进来了1',
-    // })
+
   },
   setLanguage() {
     this.setData ({
@@ -51,7 +49,7 @@ Page({
             deposit: res.data.data.p_Account_YaJin
           });
         }else{
-          wx.showModal({
+          wx.$toast({
             title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel:false
@@ -84,9 +82,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // wx.showModal({
-    //   title: '进来了1',
-    // })
+
     this.setLanguage();
     this.getData();
   },

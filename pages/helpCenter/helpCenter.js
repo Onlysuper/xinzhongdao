@@ -71,7 +71,7 @@ Page({
           wx.stopPullDownRefresh();
           wx.hideNavigationBarLoading();
         } else {
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
@@ -150,7 +150,7 @@ Page({
         if (res.data.code == 1) {
           callback && callback(res.data.data.p_Content);
         } else {
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false

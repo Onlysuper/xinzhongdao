@@ -73,7 +73,7 @@ Page({
           wx.stopPullDownRefresh();
           wx.hideNavigationBarLoading();        
         }else{
-          wx.showModal({
+          wx.$toast({
             title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false

@@ -163,18 +163,18 @@ Page({
             showLease: false
           });
         }else{
-          wx.showModal({
+          wx.$toast({
             title:  _this.data.langs['warn_title'],
-            content: '登录失败，请重试',
+            content: _this.data.langs['loginfail'],
             showCancel: false
           })
         }
       });
       
     } else {
-      wx.showModal({
+      wx.$toast({
         title: _this.data.langs['warn_title'],
-        content: '拒绝授权将无法租借充电宝哦',
+        content:  _this.data.langs['reject_resault'],
         showCancel: false
       })
     }
@@ -189,7 +189,7 @@ Page({
         that.enough();
       } else if (that.data.orderData.chongzhi == "Y"){
         if (that.data.orderData.PaySM_Key == 1) {
-          wx.showModal({
+          wx.$toast({
             title:  _this.data.langs['warn_title'],
             content: that.data.orderData.Pay_SM,
             success: function (res) {
@@ -296,7 +296,7 @@ Page({
             }
           });
         }else{
-          wx.showModal({
+          wx.$toast({
             title:  _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
@@ -336,7 +336,7 @@ Page({
           });
           that.monitorBattery(res.data.orderid);
         }else{          
-          wx.showModal({
+          wx.$toast({
             title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false

@@ -24,7 +24,7 @@ function HTTP(obj, config) {
 				if(res.data.code=='1'){
 					resolve(res.data);
 				}else{
-					wx.showModal({
+					wx.$toast({
 						title: langs['warn_title'],
 						content: res.data.msg,
 						showCancel: false
@@ -32,7 +32,7 @@ function HTTP(obj, config) {
 				}
 			},fail: (err) => {
                 wx.hideNavigationBarLoading();
-                wx.showModal({
+                wx.$toast({
                     title: '网络异常，请稍后再试!',
                     showCancel: false
                   })

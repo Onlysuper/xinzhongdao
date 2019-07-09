@@ -49,7 +49,7 @@ Page({
             balance: res.data.account
           });
         } else {
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
           })
@@ -68,9 +68,9 @@ Page({
     var pMoney = e.detail.value.money;//提现金额
     var that = this;
     if (pMoney <= 0) {
-      wx.showModal({
+      wx.$toast({
         title: '温馨提示',
-        content: '请输入正确的提现金额',
+        content: that.data.langs['devidePG_sureprice'],
         showCancel: false,
         success: function () {
           that.setData({
@@ -80,9 +80,10 @@ Page({
       });
       return false;
     };
-    wx.showModal({
+    wx.$toast({
       title: '温馨提示',
-      content: '是否确定提现' + pMoney + "元？",
+      
+      content: `${that.data.langs['wxwithdrawal_confirm']}${pMoney}${that.data.langs['money_unit']}`,
       success(res) {
         if (res.confirm) {
           // 'showorderPG_withdraw':'提現中...',
@@ -119,7 +120,7 @@ Page({
                 }, 1000);
               } else {
                 wx.hideLoading();
-                wx.showModal({
+                wx.$toast({
                   title:that.data.langs['warn_title'],
                   content: res.data.msg,
                   showCancel: false

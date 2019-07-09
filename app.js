@@ -10,6 +10,13 @@ I18n.setLocaleByIndex(wx.getStorageSync('langIndex') || 1);
 
 wx.I18n = I18n;
 wx.$apis = $apis;
+wx.$toast=function(obj){
+  let langs = wx.I18n.getLanguage();
+  wx.$toast({
+    ...obj,
+    title: langs['warn_title'],
+  })
+}
 //app.js
 App({
   onLaunch: function () {
@@ -38,7 +45,7 @@ App({
               wx.setStorageSync('WEB_Mobile', res.data.WEB_Mobile);//客服电话
               callback && callback();
             } else {
-              wx.showModal({
+              wx.$toast({
                 title: '温馨提示',
                 content: 'Int.asp:' + res.data.msg,
                 showCancel: false
@@ -73,7 +80,7 @@ App({
         }else if(res.data.code == 999){
           that.registerUser();
         } else {
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: 'Register.asp:' + res.data.msg,
             showCancel: false

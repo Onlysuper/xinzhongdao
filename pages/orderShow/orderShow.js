@@ -74,7 +74,7 @@ Page({
             });
           };
         }else{
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
@@ -88,9 +88,9 @@ Page({
   //修复故障单
   repairOrder: util.throttle(function(){
     var that = this;
-    wx.showModal({
+    wx.$toast({
       title: '温馨提示',
-      content: '是否确定修复？',
+      content: that.data.langs['ordershowPG_sure_repair'],
       success: function (res) {
         if (res.confirm) {
           that.repairAjax();
@@ -123,7 +123,7 @@ Page({
           that.changeOrder();
         } else {
           wx.hideLoading();
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
@@ -152,7 +152,7 @@ Page({
       success: function (res) {
         if(res.data.code == 1){
           wx.hideLoading();
-          wx.showModal({
+          wx.$toast({
             title: '温馨提示',
             content: res.data.msg,
             showCancel: false,
@@ -166,7 +166,7 @@ Page({
           },3000);
         }else{
           wx.hideLoading();
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
@@ -179,9 +179,9 @@ Page({
   //遗失充电宝
   finishOrder: util.throttle(function(){
     var that = this;
-    wx.showModal({
+    wx.$toast({
       title: '温馨提示',
-      content: '您好，如果您确定您所租借的充电宝已遗失，点击此按钮，系统会立即扣除您当次所缴纳的押金金额，同时结束订单。该操作无法恢复，请谨慎操作。',
+      content: that.data.langs['ordershowPG_sure_warn'],
       success: function(res){
         if(res.confirm){
           that.finishAjax();
@@ -210,7 +210,7 @@ Page({
       success: function (res) {
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false,
@@ -219,7 +219,7 @@ Page({
             }
           });
         } else {
-          wx.showModal({
+          wx.$toast({
             title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false

@@ -72,25 +72,26 @@ Page({
   getEquipment: function (e) {
     equipmentNum = e.detail.value;
   },
+  
   tiJiao: function (e) {
-    var that = this;
+    var _this = this;
     formID = e.detail.formId;
     if (!equipmentNum) {
-      wx.showModal({
+      wx.$toast({
         title: '温馨提示',
-        content: '设备编号不能为空哦',
+        content: _this.data.langs['repairPG_require'],
         showCancel: false
       })
       return;
     }
     wx.showLoading({
-      title: '提交中...',
+      title: _this.data.langs['submitting'],
       mask: true
     });
     if (imgArr.length > 0) {
-      that.uploadPhoto();
+      _this.uploadPhoto();
     } else {
-      that.subSave();
+      _this.subSave();
     }
   },
   scaner: function () {
@@ -219,7 +220,7 @@ Page({
           }, 1300);
         } else {
           wx.hideLoading();
-          wx.showModal({
+          wx.$toast({
             title: _this.data.langs['warn_title'],
             content: res.data.msg + "",
             showCancel: false
