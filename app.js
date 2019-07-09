@@ -1,6 +1,7 @@
 
 import locales from './utils/locales.js';
 import I18n from './utils/i18n.js';
+import * as $apis from './utils/apis/index.js';
 
 I18n.registerLocale(locales);
 
@@ -8,6 +9,7 @@ I18n.registerLocale(locales);
 I18n.setLocaleByIndex(wx.getStorageSync('langIndex') || 1);
 
 wx.I18n = I18n;
+wx.$apis = $apis;
 //app.js
 App({
   onLaunch: function () {

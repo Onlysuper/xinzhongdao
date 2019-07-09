@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp();
+// import { postLogin } from "../../utils/apis";
 const util = require('../../utils/util.js');
 var that;
 var externalCode;
@@ -156,7 +157,6 @@ Page({
   //加载店铺
   getShop:function(lats,lons){
     let _this = this;
-    wx.showNavigationBarLoading();
     wx.request({
       url: `${app.globalData.publicUrl}map/map.asp?language=${_this.data['langs']['lang_type']}`,
       header: {
