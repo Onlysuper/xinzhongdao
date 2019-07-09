@@ -42,6 +42,8 @@ Page({
       data: {
         longitude: wx.getStorageSync("lon"),
         latitude: wx.getStorageSync("lat"),
+        // longitude: "114.05454",
+        // latitude: "22.52291",
         // language:"语言"
       },
       method: "POST",

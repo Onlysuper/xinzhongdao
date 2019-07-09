@@ -66,6 +66,18 @@ Page({
       key: 'langIndex',
       data: this.data.langIndex
     })
+    wx.chooseLocation({
+      success: res => {
+        that.setData({
+          lon: res.longitude,
+          lat: res.latitude,
+        });
+        that.getShop(res.latitude, res.longitude);
+      },
+      fail: function (err) {
+        console.log(err);
+      }
+    })
   },
   //获取用户信息
   getUserInfo: function(callback) {
@@ -150,11 +162,12 @@ Page({
 
   //加载店铺
   getShop:function(lats,lons){
+    let _this = this;
     wx.showNavigationBarLoading();
     wx.request({
-      url: app.globalData.publicUrl + 'map/map.asp',
+      url: `${app.globalData.publicUrl}map/map.asp?language=${_this.data['langs']['lang_type']}`,
       header: {
-        'Content-Type': 'application/x-www-form-urlencoded?'+'language='+this.data['langs']['lang_type']
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
       data: {
         longitude: lons,
@@ -232,12 +245,10 @@ Page({
   scan:function(e){
     wx.scanCode({
       success: (res) => {
-        console.log("扫描："+JSON.stringify(res));
         if (res.errMsg == "scanCode:ok") {
           var deviceID = res.result;
           deviceID = deviceID.split("/");
           deviceID = deviceID[deviceID.length - 1];
-          console.log("二维码ID:" + deviceID);
           wx.navigateTo({
             url: '../showOrder/showOrder?id=' + deviceID,
           });
@@ -270,9 +281,6 @@ Page({
 
   //头部搜索
   goSearch: function () {
-    wx.showModal({
-      title: '温馨提示'
-    })
     wx.chooseLocation({
       success: res => {
         that.setData({
