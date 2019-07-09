@@ -93,7 +93,11 @@ export default {
     'presentPG_qbtx':"全部提现",
     'presentPG_tx':"提现",
     'rechargePG_recharge':'充值金额',
-    'rechargePG_wxpay':'微信支付'
+    'rechargePG_wxpay':'微信支付',
+    'shopShowPG_batteryCount':"可借充电宝",
+    'shopShowPG_customer':"商家电话",
+    'shopShowPG_address':"详细地址",
+    'shopShowPG_goto':"去这里",
   },
   'zh_fan' : {
     'lang_type':"zh_fan",
@@ -197,7 +201,11 @@ export default {
     'presentPG_qbtx':"全部提現",
     'presentPG_tx':"提現",
     'rechargePG_recharge':'充值金額',
-    'rechargePG_wxpay':'微信支付'
+    'rechargePG_wxpay':'微信支付',
+    'shopShowPG_batteryCount':"可借充電寶",
+    'shopShowPG_customer':"商家電話",
+    'shopShowPG_address':"詳細地址",
+    'shopShowPG_goto':"去這裡",
   },
   'en' : {
     'lang_type':"en",
@@ -297,6 +305,10 @@ export default {
     'presentPG_qbtx':"Full cash withdrawal",
     'presentPG_tx':"withdrawal",
     'rechargePG_recharge':'Recharge amount',
-    'rechargePG_wxpay':'Wechat Payment'
+    'rechargePG_wxpay':'Wechat Payment',
+    'shopShowPG_batteryCount':"可借充電寶",
+    'shopShowPG_customer':"商家電話",
+    'shopShowPG_address':"詳細地址",
+    'shopShowPG_goto':"去這裡",
   }
 }

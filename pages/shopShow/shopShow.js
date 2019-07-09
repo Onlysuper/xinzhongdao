@@ -7,7 +7,8 @@ Page({
    */
   data: {
     show:true,
-    shop:{}
+    shop:{},
+    langs:{}
   },
 
   /**
@@ -15,7 +16,16 @@ Page({
    */
   onLoad: function (options) {
     var shopid = options.shopid;
+    this.setLanguage();
     this.getData(shopid);
+  },
+  setLanguage() {
+    this.setData ({
+      langs: wx.I18n.getLanguage()
+    });
+    wx.setNavigationBarTitle({
+      title: this.data.langs['repair_TITLE'],
+    })
   },
   getData:function(shopid){
     wx.showNavigationBarLoading();

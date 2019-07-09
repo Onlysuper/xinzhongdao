@@ -8,19 +8,17 @@
     <view class="shopName">
       {{shop.p_ShopName}}
     </view>
-
-    
     <view class="businessTime">
-      <text class="gray">可借充電寶：</text> {{shop.batteryCount}}个
+      <text class="gray">{{langs.shopShowPG_batteryCount}}：</text> {{shop.batteryCount}}个
     </view>
     <view class="businessTime">
-      <text class="gray">商家電話：</text> {{shop.p_Tel}}
+      <text class="gray">{{langs.shopShowPG_customer}}：</text> {{shop.p_Tel}}
     </view>
     <view class="address">
-      <text class="gray">詳細地址：</text> {{shop.p_Address}}
+      <text class="gray">{{langs.shopShowPG_goto}}：</text> {{shop.p_Address}}
     </view>
     <view class="dBtn" data-lat="{{shop.p_Lat}}" data-lon="{{shop.p_Lng}}" data-name="{{shop.p_ShopName}}" data-address="{{shop.p_Address}}" bindtap="goDaoHang"> 
-      去這裡
+        {{langs.shopShowPG_goto}}
     </view>
   </view>
 </view>
