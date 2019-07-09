@@ -10,7 +10,8 @@ Page({
   data: {
     listData: [],
     showNoData: true,
-    showMore: true
+    showMore: true,
+    langs:{}
   },
 
   /**

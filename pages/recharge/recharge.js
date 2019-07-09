@@ -34,10 +34,6 @@ Page({
     })
   },
   getData:function(fid){
-    wx.showToast({
-      title: this.data['langs']['lang_type'],
-      icon: "none"
-    })
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
@@ -81,14 +77,6 @@ Page({
   //点击充值
   payTap: util.throttle(function(e){
     var that = this;
-    wx.showToast({
-      title: `${app.globalData.publicUrl}Chongzhi/Chongzhi.asp?language=${this.data['langs']['lang_type']}`,
-      icon: "none"
-    })
-    wx.showToast({
-      title: `${that.data.payMoney}`,
-      icon: "none"
-    })
     // return false;
     wx.showNavigationBarLoading();
    

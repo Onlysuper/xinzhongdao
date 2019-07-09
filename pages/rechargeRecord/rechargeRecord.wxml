@@ -2,21 +2,23 @@
 <view class="container">
   <view class="item" wx:for="{{listData}}" wx:key="{{index}}">
     <view class="itemTitle">
-      <text>訂單號: {{item.p_OrderID}}</text>
+      <text>{{langs.ordernum}}: {{item.p_OrderID}}</text>
       <text class="time">{{item.p_AddTime}}</text>
     </view>
     <view class="itemChild">
-      <text class="gray">微信充值</text>
-      <text class="redcontent green">{{item.p_CongZhi}}元</text>
+      <text class="gray">{{langs.wxwithdrawal}}</text>
+      <text class="redcontent green">{{item.p_CongZhi}}{{item.money_unit}}</text>
     </view>
   </view>
 
   <view class="noData" hidden="{{showNoData}}">
     <image src="/img/null.png" class="nullImg"></image>
-    <view class="noDataTxt">暫無記錄~</view>
+    <view class="noDataTxt">
+        {{langs.nodata}}
+    </view>
   </view>
 
   <view class="noMore" hidden="{{showMore}}">
-    ———— 已經到底了 ————
+      ————  {{langs.toend}} ————
   </view>
 </view>

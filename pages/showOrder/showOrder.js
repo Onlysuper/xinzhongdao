@@ -150,6 +150,7 @@ Page({
 
   //授权用户信息获取
   getInfo: function (e) {
+    let _this = this;
     if (e.detail.errMsg == "getUserInfo:ok") {
       app.globalData.userInfo = e.detail.userInfo;
       app.globalData.encryptedData = e.detail.encryptedData;
@@ -163,7 +164,7 @@ Page({
           });
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title:  _this.data.langs['warn_title'],
             content: '登录失败，请重试',
             showCancel: false
           })
@@ -172,7 +173,7 @@ Page({
       
     } else {
       wx.showModal({
-        title: '温馨提示',
+        title: _this.data.langs['warn_title'],
         content: '拒绝授权将无法租借充电宝哦',
         showCancel: false
       })
@@ -181,6 +182,7 @@ Page({
 
   //发起租借
   lease: util.throttle(function(e){
+    let _this = this;
     formId = e.detail.formId;
     if (wx.getStorageSync("isLogin")){
       if (that.data.orderData.chongzhi == "N"){
@@ -188,7 +190,7 @@ Page({
       } else if (that.data.orderData.chongzhi == "Y"){
         if (that.data.orderData.PaySM_Key == 1) {
           wx.showModal({
-            title: '温馨提示',
+            title:  _this.data.langs['warn_title'],
             content: that.data.orderData.Pay_SM,
             success: function (res) {
               if (res.confirm) {
@@ -247,6 +249,7 @@ Page({
 
   //余额不足时
   lessMoney:function(e){ 
+    let _this = this;
     // 充值中
     wx.showLoading({
       title: `${this.data.langs['showorderPG_recharging']}`,
@@ -294,7 +297,7 @@ Page({
           });
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title:  _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })
@@ -334,7 +337,7 @@ Page({
           that.monitorBattery(res.data.orderid);
         }else{          
           wx.showModal({
-            title: '温馨提示',
+            title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })
@@ -342,8 +345,6 @@ Page({
       }
     })
   },
-
-
   //监听电池弹出
   monitorBattery: function (orderid){
     wx.redirectTo({

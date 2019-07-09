@@ -30,7 +30,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "List/DealList.asp?page=" + page+'?language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + "List/DealList.asp?page=" + page+'&language='+this.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },

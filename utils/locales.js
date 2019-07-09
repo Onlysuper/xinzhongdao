@@ -1,6 +1,9 @@
 export default {
   'zh_jian' : {
     'lang_type':"zh_jian",
+    'warn_title':'温馨提醒',
+    'ordernum':'订单号',
+    'wxwithdrawal':'微信提现',
     'dividePRecord_TITLE':"分成提现记录",
     'dividePrsent_TITLE':"分成提现",
     'error_TITLE':"错误",
@@ -33,7 +36,7 @@ export default {
     'homepage_user':'个人中心',
     'helppage_feedback':"故障反馈",
     'helppage_servicecall':"联系客服",
-    'helppage_serviceAgreement':"服務协议",
+    'helppage_serviceAgreement':"服务协议",
     'dividePG_ordernum':'订单号',
     'dividePG_wxwithdrawal':'微信提现',
     'shopListPG_noshop':'附近还没有网点哦~',
@@ -94,6 +97,9 @@ export default {
   },
   'zh_fan' : {
     'lang_type':"zh_fan",
+    'warn_title':'溫馨提醒',
+    'ordernum':'訂單號',
+    'wxwithdrawal':'微信提現',
     'dividePRecord_TITLE':"分成提現記錄",
     'dividePrsent_TITLE':"分成提現",
     'error_TITLE':"錯誤",
@@ -195,6 +201,9 @@ export default {
   },
   'en' : {
     'lang_type':"en",
+    'warn_title':'溫馨提醒',
+    'ordernum':'訂單號',
+    'wxwithdrawal':'微信提現',
     'dividePRecord_TITLE':"withdrawal records",
     'dividePrsent_TITLE':"Royalty withdrawal",
     'error_TITLE':"error",
@@ -213,7 +222,6 @@ export default {
     'serviceAgreement_TITLE':"",
     'shopList_TITLE':"Nearby dots",
     'showOrder_TITLE':"Lease",
-    
     'success_TITLE':"Rental results",
     'transaction_TITLE':"Transaction details",
     'user_TITLE':"Personal Center",

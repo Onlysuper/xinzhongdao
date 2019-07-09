@@ -43,6 +43,7 @@ Page({
       },
       dataType: "json",
       success: function (res) {
+        console.log('提现',res);
         wx.hideNavigationBarLoading();
         if(res.data.code == 1){
           that.setData({
@@ -65,6 +66,7 @@ Page({
   },1000),
   //提现
   present: util.throttle(function(e){
+    let _this = this;
     var pMoney = e.detail.value.money;//提现金额
     var that = this;
     if (pMoney <= 0){
@@ -90,7 +92,7 @@ Page({
             mask: true
           });
           wx.request({
-            url: app.globalData.publicUrl + 'Tixian/Tixian.asp'+'?language='+this.data['langs']['lang_type'],
+            url: app.globalData.publicUrl + 'Tixian/Tixian.asp'+'?language='+_this.data['langs']['lang_type'],
             header: {
               "Content-Type": "application/x-www-form-urlencoded"
             },
