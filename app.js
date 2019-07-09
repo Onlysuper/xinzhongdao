@@ -12,7 +12,7 @@ wx.I18n = I18n;
 wx.$apis = $apis;
 wx.$toast=function(obj){
   let langs = wx.I18n.getLanguage();
-  wx.$toast({
+  wx.showModal({
     ...obj,
     title: langs['warn_title'],
   })

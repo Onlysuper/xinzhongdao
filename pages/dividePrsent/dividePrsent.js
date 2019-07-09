@@ -86,7 +86,6 @@ Page({
       content: `${that.data.langs['wxwithdrawal_confirm']}${pMoney}${that.data.langs['money_unit']}`,
       success(res) {
         if (res.confirm) {
-          // 'showorderPG_withdraw':'提現中...',
           wx.showLoading({
             title: that.data['langs']['showorderPG_withdraw'],
             mask: true
