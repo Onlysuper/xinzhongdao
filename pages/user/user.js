@@ -11,6 +11,7 @@ Page({
     showNickName:true,
     showShop:true,
     langs:{},
+    nickName:''
   },
 
   /**
@@ -72,10 +73,10 @@ Page({
     if (!wx.getStorageSync("isLogin")) {
       return false;
     };
-    var that = this;
+    var _this = this;
     wx.showNavigationBarLoading();
     wx.request({
-      url: app.globalData.publicUrl + 'User/Info.asp'+'?language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + 'User/Info.asp'+'?language='+_this.data['langs']['lang_type'],
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -87,20 +88,23 @@ Page({
       },
       dataType: "json",
       success: function (res) {
-        console.log(JSON.stringify(res));
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
+          _this.setData({
+            nickName:res.data.data.p_WxName
+          })
           if (res.data.data.agent_open == 0){
             //普通用户
-            that.setData({
+            _this.setData({
               showShop:true
             });
           }else{
             //特约用户
-            that.setData({
+            _this.setData({
               showShop: false
             });
           }
+         
         } else {
           wx.showModal({
             title: '温馨提示',

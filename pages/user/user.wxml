@@ -5,7 +5,10 @@
       <open-data type="userAvatarUrl" class="avatar"></open-data>
     </view>
     <view class="userNickName">
-      <open-data type="userNickName" hidden="{{showNickName}}"></open-data>
+      <!-- <open-data type="userNickName" hidden="{{showNickName}}"></open-data> -->
+      <view>
+        {{nickName}}
+      </view>
       <button open-type="getUserInfo" class="placeLogin" bindgetuserinfo="getInfo" hidden="{{!showNickName}}">
         {{langs.userPG_notlogged}}
       </button>
