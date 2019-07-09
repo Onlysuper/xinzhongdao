@@ -74,7 +74,7 @@ Page({
           wx.hideNavigationBarLoading();        
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });

@@ -75,7 +75,7 @@ Page({
           };
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })
@@ -124,7 +124,7 @@ Page({
         } else {
           wx.hideLoading();
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });
@@ -167,7 +167,7 @@ Page({
         }else{
           wx.hideLoading();
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });
@@ -211,7 +211,7 @@ Page({
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false,
             success: function (result) {
@@ -220,7 +220,7 @@ Page({
           });
         } else {
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });

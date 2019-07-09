@@ -6,9 +6,9 @@ function HTTP(obj, config) {
 	config = { ...defaultConfig,
 		...config
 	}
-
     wx.showNavigationBarLoading();
 	return new Promise((resolve, reject) => {
+		let langs = wx.I18n.getLanguage();
 		let options = {
 			url: "",
 			method: "GET",
@@ -21,12 +21,12 @@ function HTTP(obj, config) {
 			success: (res) => {
 				// 状态码为200
 				wx.hideNavigationBarLoading();
-				console.log(res);
-				if(res.code=='1'){
-					return res.data;
+				if(res.data.code=='1'){
+					resolve(res.data);
 				}else{
 					wx.showModal({
-						title: '有问题',
+						title: langs['warn_title'],
+						content: res.data.msg,
 						showCancel: false
 					})
 				}

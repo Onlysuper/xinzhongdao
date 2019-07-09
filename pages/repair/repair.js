@@ -188,6 +188,7 @@ Page({
     })
   },
   subSave: function () {
+    let _this = this;
     wx.request({
       url: app.globalData.publicUrl + 'Repair/repair.asp'+'?language='+this.data['langs']['lang_type'],      
       header: {
@@ -219,7 +220,7 @@ Page({
         } else {
           wx.hideLoading();
           wx.showModal({
-            title: '温馨提示',
+            title: _this.data.langs['warn_title'],
             content: res.data.msg + "",
             showCancel: false
           })

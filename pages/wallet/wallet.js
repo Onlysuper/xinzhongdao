@@ -29,7 +29,7 @@ Page({
     })
   },
   getData:function(){
-    var that = this;
+    var _this = this;
     wx.showNavigationBarLoading();
     wx.request({
       url: app.globalData.publicUrl +'User/Info.asp',
@@ -46,13 +46,13 @@ Page({
       success: function(res){
         wx.hideNavigationBarLoading();
         if(res.data.code == 1){
-          that.setData({
+          _this.setData({
             balance: res.data.data.p_Account_My,
             deposit: res.data.data.p_Account_YaJin
           });
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel:false
           })

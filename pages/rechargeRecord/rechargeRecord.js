@@ -45,7 +45,6 @@ Page({
       method: "POST",
       dataType: "json",
       success: function (res) {
-        console.log("充值订单列表："+JSON.stringify(res));
         if (res.data.code == 1) {
           maxPage = res.data.maxpage;
           if (res.data.total > 0) {
@@ -71,7 +70,7 @@ Page({
           wx.hideNavigationBarLoading();
         } else {
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });

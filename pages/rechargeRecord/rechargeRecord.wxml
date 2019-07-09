@@ -6,7 +6,7 @@
       <text class="time">{{item.p_AddTime}}</text>
     </view>
     <view class="itemChild">
-      <text class="gray">{{langs.wxwithdrawal}}</text>
+      <text class="gray">{{langs.wxrecharge}}</text>
       <text class="redcontent green">{{item.p_CongZhi}}{{item.money_unit}}</text>
     </view>
   </view>

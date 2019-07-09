@@ -43,7 +43,6 @@ Page({
       },
       dataType: "json",
       success: function (res) {
-        console.log('提现',res);
         wx.hideNavigationBarLoading();
         if(res.data.code == 1){
           that.setData({
@@ -51,7 +50,7 @@ Page({
           });
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
           })
         }
@@ -68,14 +67,13 @@ Page({
   present: util.throttle(function(e){
     let _this = this;
     var pMoney = e.detail.value.money;//提现金额
-    var that = this;
     if (pMoney <= 0){
       wx.showModal({
         title: '温馨提示',
         content: '请输入正确的提现金额',
         showCancel: false,
         success:function(){
-          that.setData({
+          _this.setData({
             prsentMoney: ""
           });
         }
@@ -88,7 +86,7 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.showLoading({
-            title: that.data['langs']['showorderPG_withdraw'],
+            title: _this.data['langs']['showorderPG_withdraw'],
             mask: true
           });
           wx.request({
@@ -109,7 +107,7 @@ Page({
             success: function (res) {              
               if (res.data.code == 1) {
                 wx.showToast({
-                  title: '提现成功',
+                  title: _this.data.langs['wxwithdrawalsuccess'],
                   icon: 'success',
                   duration: 2000
                 });
@@ -121,7 +119,7 @@ Page({
               } else {
                 wx.hideLoading();
                 wx.showModal({
-                  title: '温馨提示',
+                  title: _this.data.langs['warn_title'],
                   content: res.data.msg,
                   showCancel: false
                 })

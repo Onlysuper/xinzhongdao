@@ -50,7 +50,7 @@ Page({
           });
         } else {
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
           })
         }
@@ -108,7 +108,7 @@ Page({
             success: function (res) {
               if (res.data.code == 1) {
                 wx.showToast({
-                  title: '提现成功',
+                  title: that.data.langs['wxwithdrawalsuccess'],
                   icon: 'success',
                   duration: 2000
                 });
@@ -120,7 +120,7 @@ Page({
               } else {
                 wx.hideLoading();
                 wx.showModal({
-                  title: '温馨提示',
+                  title:that.data.langs['warn_title'],
                   content: res.data.msg,
                   showCancel: false
                 })

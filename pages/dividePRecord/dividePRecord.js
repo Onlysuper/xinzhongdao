@@ -70,7 +70,7 @@ Page({
           wx.hideNavigationBarLoading();
         } else {
           wx.showModal({
-            title: '温馨提示',
+            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });

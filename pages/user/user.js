@@ -46,6 +46,7 @@ Page({
     })
   },
   getInfo:function(e){
+    let _this = this;
     var goUrl = e.target.dataset.url;
     if (e.detail.errMsg == "getUserInfo:ok"){
       if (!wx.getStorageSync("isLogin")) {//判断用户是否注册
@@ -62,7 +63,7 @@ Page({
       });
     }else{
       wx.showToast({
-        title: '您拒绝了授权',
+        title: _this.data.langs['rejectshouquan'],
         icon:"none"
       })
     }
@@ -75,58 +76,73 @@ Page({
     };
     var _this = this;
     wx.showNavigationBarLoading();
-    // wx.$apis.postUserInfo(
-    //   `?language=${_this.data['langs']['lang_type']}`
-    // )({
-    //   openID: wx.getStorageSync("openId"),
-    //   longitude: wx.getStorageSync("lon"),
-    //   latitude: wx.getStorageSync("lat")})
-    //   .then(res=>{
-    //   console.log(res);
-    // })
-    // return false;
-    wx.request({
-      url: app.globalData.publicUrl + 'User/Info.asp'+'?language='+_this.data['langs']['lang_type'],
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      method: 'POST',
-      data: {
-        openID: wx.getStorageSync("openId"),
-        longitude: wx.getStorageSync("lon"),
-        latitude: wx.getStorageSync("lat")
-      },
-      dataType: "json",
-      success: function (res) {
-        wx.hideNavigationBarLoading();
-        if (res.data.code == 1) {
+    wx.$apis.postUserInfo(
+      `?language=${_this.data['langs']['lang_type']}`
+    )({
+      openID: wx.getStorageSync("openId"),
+      longitude: wx.getStorageSync("lon"),
+      latitude: wx.getStorageSync("lat")})
+    .then(res=>{
+      if (res.code == '1') {
+        _this.setData({
+          nickName:res.data.p_WxName
+        })
+        if (res.data.agent_open == 0){
+          //普通用户
           _this.setData({
-            nickName:res.data.data.p_WxName
-          })
-          if (res.data.data.agent_open == 0){
-            //普通用户
-            _this.setData({
-              showShop:true
-            });
-          }else{
-            //特约用户
-            _this.setData({
-              showShop: false
-            });
-          }
-         
-        } else {
-          wx.showModal({
-            title: '温馨提示',
-            content: res.data.msg,
-            showCancel: false
-          })
+            showShop:true
+          });
+        }else{
+          //特约用户
+          _this.setData({
+            showShop: false
+          });
         }
       }
+    }).catch((error)=>{
+
     })
+    // return false;
+  //   wx.request({
+  //     url: app.globalData.publicUrl + 'User/Info.asp'+'?language='+_this.data['langs']['lang_type'],
+  //     header: {
+  //       "Content-Type": "application/x-www-form-urlencoded"
+  //     },
+  //     method: 'POST',
+  //     data: {
+  //       openID: wx.getStorageSync("openId"),
+  //       longitude: wx.getStorageSync("lon"),
+  //       latitude: wx.getStorageSync("lat")
+  //     },
+  //     dataType: "json",
+  //     success: function (res) {
+  //       wx.hideNavigationBarLoading();
+  //       if (res.data.code == 1) {
+  //         _this.setData({
+  //           nickName:res.data.data.p_WxName
+  //         })
+  //         if (res.data.data.agent_open == 0){
+  //           //普通用户
+  //           _this.setData({
+  //             showShop:true
+  //           });
+  //         }else{
+  //           //特约用户
+  //           _this.setData({
+  //             showShop: falses
+  //           });
+  //         }
+         
+  //       } else {
+  //         wx.showModal({
+  //           title:_this.data.langs['warn_title'],
+  //           content: res.data.msg,
+  //           showCancel: false
+  //         })
+  //       }
+  //     }
+  //   })
   },
-
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
