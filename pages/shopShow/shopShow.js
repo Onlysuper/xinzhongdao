@@ -21,7 +21,7 @@ Page({
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
-      url: app.globalData.publicUrl + "Shop/ShopDetail.asp?id=" + shopid+'&language='+this.data['langs']['lang_type'],
+      url: app.globalData.publicUrl + "Shop/ShopDetail.asp?id=" + shopid+'&language='+that.data['langs']['lang_type'],
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -38,7 +38,7 @@ Page({
           })
         }else{
           wx.showModal({
-            title: '温馨提示',
+            title: that.data['langs']['warn_title'],
             content: res.data.msg,
             showCancel:false
           })
