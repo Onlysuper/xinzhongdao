@@ -27,20 +27,22 @@
       <text class="gray">{{langs.ordershowPG_borrowlocal}}</text>
       <text class="rightcontent">{{orderDetail.p_ShopName}}</text>
     </view>
+  
+    
     <view class="smallItem" wx:if="{{orderDetail.p_ReturnTime}}">
-      <text class="gray">歸還時間</text>
+      <text class="gray">{{langs.ordershowPG_returntime}}</text>
       <text class="rightcontent">{{orderDetail.p_ReturnTime}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_ReturnShopName}}">
-      <text class="gray">歸還地點</text>
+      <text class="gray">{{langs.ordershowPG_returnlocal}}</text>
       <text class="rightcontent">{{orderDetail.p_ReturnShopName}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_UseTime}}">
-      <text class="gray">使用時長</text>
+      <text class="gray">{{langs.ordershowPG_usetime}}</text>
       <text class="rightcontent">{{orderDetail.p_UseTime}}分钟</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_PayPrice}}">
-      <text class="gray">結算費用</text>
+      <text class="gray">{{langs.ordershowPG_payprice}}</text>
       <text class="rightcontent">{{orderDetail.p_PayPrice}}元</text>
     </view>
   </view>
@@ -51,11 +53,11 @@
 
   <view class="rules">
     <view class="promiseTitle">
-      ———— 計費規則 ————
+      ———— {{langs.ordershowPG_countrule}} ————
     </view>
 
     <view class="charging">
-      租借前{{orderDetail.p_FreeTime}}分鐘免費，超過{{orderDetail.p_FreeTime}}分鐘按{{orderDetail.p_Price}}元每小時計費，不滿1小時按1小時計費；每天封頂{{orderDetail.p_Price_Max}}元。
+      {{langs.ordershowPG_describe1}}{{orderDetail.p_FreeTime}}{{langs.ordershowPG_describe2}}，{{langs.ordershowPG_describe3}}{{orderDetail.p_FreeTime}}{{langs.ordershowPG_describe4}}{{orderDetail.p_Price}}{{langs.ordershowPG_describe5}}{{orderDetail.p_Price_Max}}{{langs.money_unit}}。
     </view>
   </view>
 </view>

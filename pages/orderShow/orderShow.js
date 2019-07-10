@@ -21,8 +21,8 @@ Page({
    */
   onLoad: function (options) {
     orderid = options.orderid;
-    this.getData();
     this.setLanguage();
+    this.getData();
   },
   setLanguage() {
     this.setData ({

@@ -96,7 +96,7 @@ App({
     userInfo: null,       //用户信息
     encryptedData:"",
     iv:"",
-    publicUrl:"https://share.xmfstore.com/client/cdb/newXcx/"         //请求接口公共路径
-    // publicUrl:"http://test52.qtopay.cn/client/cdb/newXcx/"         //请求接口公共路径
+    // publicUrl:"https://share.xmfstore.com/client/cdb/newXcx/"         //请求接口公共路径
+    publicUrl:"http://test52.qtopay.cn/client/cdb/newXcx/"         //请求接口公共路径
   }
 })
