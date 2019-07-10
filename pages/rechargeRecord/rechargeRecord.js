@@ -1,4 +1,3 @@
-// pages/rechargeRecord/rechargeRecord.js
 const app = getApp();
 
 var page = 1;

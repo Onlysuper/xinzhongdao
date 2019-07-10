@@ -1,4 +1,3 @@
-// pages/wallet/wallet.js
 const util = require("../../utils/util.js");
 const app = getApp();
 Page({
@@ -67,10 +66,12 @@ Page({
       formID = "";
     }
     var url = e.target.dataset.url;
-    wx.navigateTo({
-      url: url + "?formId=" + formID,
-    })
-  },1000),
+    if(url){
+      wx.navigateTo({
+        url: url + "?formId=" + formID,
+      })
+    }
+  }),
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

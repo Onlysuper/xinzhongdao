@@ -1,4 +1,3 @@
-/* pages/wallet/wallet.wxss */
 .myBalance{
   background: white;
   padding: 40rpx 16rpx;

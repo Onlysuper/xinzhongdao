@@ -14,14 +14,15 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-
+ 
 
 function throttle(fn, gapTime) {
   if (gapTime == null || gapTime == undefined) {
     gapTime = 1500
   }
 
-  let _lastTime = null
+  // let _lastTime = null
+  let _lastTime = 0
 
   // 返回新的函数
   return function () {
