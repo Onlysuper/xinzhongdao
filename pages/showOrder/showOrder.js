@@ -164,7 +164,6 @@ Page({
           });
         }else{
           wx.$toast({
-            title:  _this.data.langs['warn_title'],
             content: _this.data.langs['loginfail'],
             showCancel: false
           })
@@ -173,7 +172,6 @@ Page({
       
     } else {
       wx.$toast({
-        title: _this.data.langs['warn_title'],
         content:  _this.data.langs['reject_resault'],
         showCancel: false
       })
@@ -190,7 +188,6 @@ Page({
       } else if (that.data.orderData.chongzhi == "Y"){
         if (that.data.orderData.PaySM_Key == 1) {
           wx.$toast({
-            title:  _this.data.langs['warn_title'],
             content: that.data.orderData.Pay_SM,
             success: function (res) {
               if (res.confirm) {
@@ -297,7 +294,6 @@ Page({
           });
         }else{
           wx.$toast({
-            title:  _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })
@@ -337,7 +333,6 @@ Page({
           that.monitorBattery(res.data.orderid);
         }else{          
           wx.$toast({
-            title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })

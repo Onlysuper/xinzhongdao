@@ -2,6 +2,7 @@ export default {
   'zh_jian' : {
     'lang_type':"zh_jian",
     'warn_title':'温馨提醒',
+    'http_error':'网络异常，请稍后再试!',
     'ordernum':'订单号',
     'wxwithdrawal':'微信提现',
     'wxwithdrawalsuccess':'提现成功',
@@ -140,6 +141,7 @@ export default {
   'zh_fan' : {
     'lang_type':"zh_fan",
     'warn_title':'溫馨提醒',
+    'http_error':'網絡異常，請稍後再試!',
     'ordernum':'訂單號',
     'rejectshouquan':'您拒絕了授權',
     'wxwithdrawal':'微信提現',

@@ -247,7 +247,6 @@ Page({
           });
         }else{
           wx.$toast({
-            title: '温馨提示',
             content: res.errMsg,
             showCancel: false
           })

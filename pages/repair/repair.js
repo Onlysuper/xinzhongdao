@@ -78,7 +78,6 @@ Page({
     formID = e.detail.formId;
     if (!equipmentNum) {
       wx.$toast({
-        title: '温馨提示',
         content: _this.data.langs['repairPG_require'],
         showCancel: false
       })
@@ -221,7 +220,6 @@ Page({
         } else {
           wx.hideLoading();
           wx.$toast({
-            title: _this.data.langs['warn_title'],
             content: res.data.msg + "",
             showCancel: false
           })

@@ -25,7 +25,7 @@ function HTTP(obj, config) {
 					resolve(res.data);
 				}else{
 					wx.$toast({
-						title: langs['warn_title'],
+					
 						content: res.data.msg,
 						showCancel: false
 					})
@@ -33,10 +33,10 @@ function HTTP(obj, config) {
 			},fail: (err) => {
                 wx.hideNavigationBarLoading();
                 wx.$toast({
-                    title: '网络异常，请稍后再试!',
+					title: langs['http_error'],
                     showCancel: false
                   })
-				reject("网络异常，请稍后再试!");
+				reject(langs['http_error']);
 			},
 			complete: () => {}
 		}

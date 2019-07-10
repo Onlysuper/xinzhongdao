@@ -71,7 +71,6 @@ Page({
           wx.hideNavigationBarLoading();
         } else {
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });

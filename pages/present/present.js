@@ -50,7 +50,6 @@ Page({
           });
         }else{
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: res.data.msg,
           })
         }
@@ -69,7 +68,6 @@ Page({
     var pMoney = e.detail.value.money;//提现金额
     if (pMoney <= 0){
       wx.$toast({
-        title: '温馨提示',
         content: _this.data.langs['devidePG_sureprice'],
         showCancel: false,
         success:function(){
@@ -81,7 +79,6 @@ Page({
       return false;
     };
     wx.$toast({
-      title: '温馨提示',
       content:  _this.data.langs['wxwithdrawal_confirm']+ pMoney +_this.data.langs['money_unit'],
       success(res) {
         if (res.confirm) {
@@ -119,7 +116,6 @@ Page({
               } else {
                 wx.hideLoading();
                 wx.$toast({
-                  title: _this.data.langs['warn_title'],
                   content: res.data.msg,
                   showCancel: false
                 })

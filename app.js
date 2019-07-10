@@ -80,7 +80,6 @@ App({
           that.registerUser();
         } else {
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: 'Register.asp:' + res.data.msg,
             showCancel: false
           })

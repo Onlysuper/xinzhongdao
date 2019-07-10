@@ -49,7 +49,6 @@ Page({
           });
         }else{
           wx.$toast({
-            title: _this.data.langs['warn_title'],
             content: res.data.msg,
             showCancel:false
           })

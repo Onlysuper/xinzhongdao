@@ -74,7 +74,6 @@ Page({
           };
         }else{
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           })
@@ -88,7 +87,6 @@ Page({
   repairOrder: util.throttle(function(){
     var that = this;
     wx.$toast({
-      title: '温馨提示',
       content: that.data.langs['ordershowPG_sure_repair'],
       success: function (res) {
         if (res.confirm) {
@@ -152,7 +150,6 @@ Page({
         if(res.data.code == 1){
           wx.hideLoading();
           wx.$toast({
-            title: '温馨提示',
             content: res.data.msg,
             showCancel: false,
             success:function(){
@@ -166,7 +163,6 @@ Page({
         }else{
           wx.hideLoading();
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });
@@ -179,7 +175,6 @@ Page({
   finishOrder: util.throttle(function(){
     var that = this;
     wx.$toast({
-      title: '温馨提示',
       content: that.data.langs['ordershowPG_sure_warn'],
       success: function(res){
         if(res.confirm){
@@ -210,7 +205,6 @@ Page({
         wx.hideNavigationBarLoading();
         if (res.data.code == 1) {
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false,
             success: function (result) {
@@ -219,7 +213,6 @@ Page({
           });
         } else {
           wx.$toast({
-            title: that.data.langs['warn_title'],
             content: res.data.msg,
             showCancel: false
           });
