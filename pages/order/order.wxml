@@ -17,7 +17,7 @@
 
     <view class="itemChild" wx:if="{{item.p_PayPrice}}">
       <text class="gray">{{langs.orderPG_amountprice}}</text>
-      <text class="redcontent">{{item.p_PayPrice}}元</text>
+      <text class="redcontent">{{item.p_PayPrice}}{{langs.money_unit}}</text>
     </view>
   </view>
 

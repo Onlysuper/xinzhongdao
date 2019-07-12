@@ -39,11 +39,11 @@
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_UseTime}}">
       <text class="gray">{{langs.ordershowPG_usetime}}</text>
-      <text class="rightcontent">{{orderDetail.p_UseTime}}分钟</text>
+      <text class="rightcontent">{{orderDetail.p_UseTime}}{{langs.secend}}</text>
     </view>
     <view class="smallItem" wx:if="{{orderDetail.p_PayPrice}}">
       <text class="gray">{{langs.ordershowPG_payprice}}</text>
-      <text class="rightcontent">{{orderDetail.p_PayPrice}}元</text>
+      <text class="rightcontent">{{orderDetail.p_PayPrice}}{{langs.money_unit}}</text>
     </view>
   </view>
 

@@ -7,7 +7,7 @@
     </view>
     <view class="itemChild">
       <text class="gray">{{langs.dividePG_wxwithdrawal}}</text>
-      <text class="redcontent green">{{item.p_TiXian}}元</text>
+      <text class="redcontent green">{{item.p_TiXian}}{{langs.money_unit}}</text>
     </view>
   </view>
 

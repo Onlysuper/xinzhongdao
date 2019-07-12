@@ -23,14 +23,14 @@
     </view>
 
     <view class="smDes">
-      <view>{{langs.showorderPG_yrq}}：{{orderData.yajin}}元</view>
-      <view>{{langs.showorderPG_costfree}}：{{orderData.mianfei}}分鐘</view>
-      <view>{{langs.showorderPG_counter}}：超出免費時長，按每小時{{orderData.jifei}}元計費，不滿一小時按一小時計算，每天封頂{{orderData.fengding}}元</view>
+      <view>{{langs.showorderPG_yrq}}：{{orderData.yajin}}{{langs.money_unit}}</view>
+      <view>{{langs.showorderPG_costfree}}：{{orderData.mianfei}}{{langs.secend}}</view>
+      <view>{{langs.showorderPG_counter}}：{{langs.count_rule1}}{{orderData.jifei}}{{langs.count_rule2}}{{orderData.fengding}}{{langs.money_unit}}</view>
     </view>
   </view>
 
   <view class="balance" hidden="{{!showGetingo}}">
-    {{langs.showorderPG_balance}} <text class="red">{{orderData.myyue}}</text> 元
+    {{langs.showorderPG_balance}} <text class="red">{{orderData.myyue}}</text> {{langs.money_unit}}
   </view>
   <form report-submit="true" bindsubmit="lease" hidden="{{showLease}}">
     <button form-type="submit" class="leaseBtn" hover-class="lightBlue">

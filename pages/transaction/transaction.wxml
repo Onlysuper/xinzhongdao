@@ -7,12 +7,9 @@
     </view>
     <view class="itemChild">
       <text class="gray">{{item.type}}</text>
-      <!-- <text wx:if="{{item.type=='微信充值'}}" class="redcontent green">{{item.money}}元</text>
-      <text wx:if="{{item.type=='充电消费'}}" class="redcontent red">{{item.money}}元</text>
-      <text wx:if="{{item.type=='微信提现'}}" class="redcontent blue">{{item.money}}元</text> -->
-      <text wx:if="{{item.typeCode=='CongZhi'}}" class="redcontent green">{{item.money}}元</text>
-      <text wx:if="{{item.typeCode=='PayPrice'}}" class="redcontent red">{{item.money}}元</text>
-      <text wx:if="{{item.typeCode=='TiXian'}}" class="redcontent blue">{{item.money}}元</text>
+      <text wx:if="{{item.typeCode=='CongZhi'}}" class="redcontent green">{{item.money}}{{langs.money_unit}}</text>
+      <text wx:if="{{item.typeCode=='PayPrice'}}" class="redcontent red">{{item.money}}{{langs.money_unit}}</text>
+      <text wx:if="{{item.typeCode=='TiXian'}}" class="redcontent blue">{{item.money}}{{langs.money_unit}}</text>
     </view>
   </view> 
 
