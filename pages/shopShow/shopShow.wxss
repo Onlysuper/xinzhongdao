@@ -3,8 +3,12 @@
   position: relative;
 }
 .banner image{
-   width: 100vw;
-  height: 50vw;
+   /* width: 300vw;
+  height: 50vw; */
+   /* width: 300rpx;
+  height: 125rpx; */
+   width: 750rpx;
+  height: 312rpx;
   vertical-align: text-top;
 }
 
