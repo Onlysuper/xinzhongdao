@@ -7,7 +7,7 @@
     </view>
     <view class="itemChild">
       <text class="gray">{{langs.wxwithdrawal}}</text>
-      <text class="redcontent green">{{item.p_TiXian}}{{item.money_unit}}</text>
+      <text class="redcontent green">{{langs.money_unit}}{{item.p_TiXian}}</text>
     </view>
   </view>
 

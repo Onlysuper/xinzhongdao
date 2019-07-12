@@ -2,11 +2,11 @@
   <view class="myBalance clearfix">
     <view class="left">
       <view class="balanceTitle">{{langs.walletPG_balance}}</view>
-      <view class="balance">HK${{balance}}</view>
+      <view class="balance">{{langs.money_unit}}{{balance}}</view>
     </view>
     <view class="right">
       <view class="balanceTitle">{{langs.walletPG_deposit}}</view>
-      <view class="balance">HK${{deposit}}</view>
+      <view class="balance">{{langs.money_unit}}{{deposit}}</view>
     </view>
   </view>
 

@@ -7,9 +7,9 @@
     </view>
     <view class="itemChild">
       <text class="gray">{{item.type}}</text>
-      <text wx:if="{{item.typeCode=='CongZhi'}}" class="redcontent green">{{item.money}}{{langs.money_unit}}</text>
-      <text wx:if="{{item.typeCode=='PayPrice'}}" class="redcontent red">{{item.money}}{{langs.money_unit}}</text>
-      <text wx:if="{{item.typeCode=='TiXian'}}" class="redcontent blue">{{item.money}}{{langs.money_unit}}</text>
+      <text wx:if="{{item.typeCode=='CongZhi'}}" class="redcontent green">{{langs.money_unit}}{{item.money}}</text>
+      <text wx:if="{{item.typeCode=='PayPrice'}}" class="redcontent red">{{langs.money_unit}}{{item.money}}</text>
+      <text wx:if="{{item.typeCode=='TiXian'}}" class="redcontent blue">{{langs.money_unit}}{{item.money}}</text>
     </view>
   </view> 
 

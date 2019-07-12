@@ -7,17 +7,15 @@
     </view>
     <view class="itemChild">
       <text class="gray">{{langs.wxrecharge}}</text>
-      <text class="redcontent green">{{item.p_CongZhi}}{{item.money_unit}}</text>
+      <text class="redcontent green">{{langs.money_unit}}{{item.p_CongZhi}}</text>
     </view>
   </view>
-
   <view class="noData" hidden="{{showNoData}}">
     <image src="/img/null.png" class="nullImg"></image>
     <view class="noDataTxt">
         {{langs.nodata}}
     </view>
   </view>
-
   <view class="noMore" hidden="{{showMore}}">
       ————  {{langs.toend}} ————
   </view>

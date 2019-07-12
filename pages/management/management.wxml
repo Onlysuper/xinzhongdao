@@ -22,7 +22,7 @@
   </view>
 
   <view class="money">
-    HK$100.00
+    {{langs.money_unit}}100.00
   </view>
 
   <view class="statistics clearfix">
@@ -33,8 +33,6 @@
     <view>{{langs.managementPG_sbs}}：10台</view>
     <view>{{langs.managementPG_fczb}}：30%</view>
   </view>
-
-
   <view class="button">
     <form report-submit="true" class="presentRight" data-url="../dividePrsent/dividePrsent" bindsubmit="goPage">
       <button form-type="submit" class="btn">申請提現</button>

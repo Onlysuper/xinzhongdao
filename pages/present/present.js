@@ -79,7 +79,7 @@ Page({
       return false;
     };
     wx.$toast({
-      content:  _this.data.langs['wxwithdrawal_confirm']+ pMoney +_this.data.langs['money_unit'],
+      content:  _this.data.langs['wxwithdrawal_confirm']+ _this.data.langs['money_unit']+pMoney,
       success(res) {
         if (res.confirm) {
           wx.showLoading({

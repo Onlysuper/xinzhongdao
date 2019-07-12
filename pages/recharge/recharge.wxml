@@ -6,7 +6,7 @@
 
   <view class="moneyList clearfix">
     <view wx:for="{{moneyList}}" wx:key="{{index}}" class="{{item == payMoney ? 'item active' : 'item'}}" data-money="{{item}}" bindtap="chooseMoney">
-      {{item}}{{langs.money_unit}}
+      {{langs.money_unit}}{{item}}
     </view>
   </view>
 

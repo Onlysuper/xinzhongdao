@@ -2,7 +2,7 @@
 <view class="container">
   <form report-submit="true" bindsubmit="present">
     <view class="hasMoney">
-      {{langs.devidePG_ktx}}：<text class="money">{{balance}}</text>{{langs.money_unit}}
+      {{langs.devidePG_ktx}}：<text class="money">{{langs.money_unit}}{{balance}}</text>
     </view>
 
     <view class="inputBox">

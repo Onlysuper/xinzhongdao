@@ -82,7 +82,7 @@ Page({
     wx.$toast({
       title: '温馨提示',
       
-      content: `${that.data.langs['wxwithdrawal_confirm']}${pMoney}${that.data.langs['money_unit']}`,
+      content: `${that.data.langs['wxwithdrawal_confirm']}${that.data.langs['money_unit']}${pMoney}`,
       success(res) {
         if (res.confirm) {
           wx.showLoading({
