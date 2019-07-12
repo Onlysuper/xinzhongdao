@@ -6,10 +6,10 @@
     </view>
     <view class="userNickName">
       <!-- <open-data type="userNickName" hidden="{{showNickName}}"></open-data> -->
-      <view>
+      <view v-if="nickName">
         {{nickName}}
       </view>
-      <button open-type="getUserInfo" class="placeLogin" bindgetuserinfo="getInfo" hidden="{{!showNickName}}">
+      <button v-else open-type="getUserInfo" class="placeLogin" bindgetuserinfo="getInfo" hidden="{{!showNickName}}">
         {{langs.userPG_notlogged}}
       </button>
     </view>
