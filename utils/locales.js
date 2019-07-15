@@ -101,8 +101,7 @@ export default {
     'ordershowPG_describe2':"分钟免费",
     'ordershowPG_describe3':"超过",
     'ordershowPG_describe4':"分钟按",
-    'ordershowPG_describe5':"元每小时计算，不满1小时按1小时计算；每天封顶",
-
+    'ordershowPG_describe5':"每小时计算，不满1小时按1小时计算；每天封顶",
     'walletPG_recharge':"充值",
     'walletPG_balance':"账户余额(HK$)",
     'walletPG_deposit':"押金(HK$)",
@@ -243,7 +242,7 @@ export default {
     'ordershowPG_describe2':"分鐘免費",
     'ordershowPG_describe3':"超過",
     'ordershowPG_describe4':"分鐘按",
-    'ordershowPG_describe5':"元每小時計費，不滿1小時按1小時計費；每天封頂",
+    'ordershowPG_describe5':"每小時計費，不滿1小時按1小時計費；每天封頂",
     'walletPG_recharge':"充值",
     'walletPG_balance':"賬戶餘額(HK$)",
     'walletPG_deposit':"押金(HK$)",

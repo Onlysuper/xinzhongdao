@@ -30,7 +30,7 @@
   </view>
 
   <view class="balance" hidden="{{!showGetingo}}">
-    {{langs.showorderPG_balance}} <text class="red">{{orderData.myyue}}</text> {{langs.money_unit}}
+    {{langs.showorderPG_balance}} <text class="red">{{langs.money_unit}}{{orderData.myyue}}</text> 
   </view>
   <form report-submit="true" bindsubmit="lease" hidden="{{showLease}}">
     <button form-type="submit" class="leaseBtn" hover-class="lightBlue">

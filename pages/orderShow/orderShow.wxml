@@ -57,7 +57,7 @@
     </view>
 
     <view class="charging">
-      {{langs.ordershowPG_describe1}}{{orderDetail.p_FreeTime}}{{langs.ordershowPG_describe2}}，{{langs.ordershowPG_describe3}}{{orderDetail.p_FreeTime}}{{langs.ordershowPG_describe4}}{{orderDetail.p_Price}}{{langs.ordershowPG_describe5}}{{langs.money_unit}}{{orderDetail.p_Price_Max}}。
+      {{langs.ordershowPG_describe1}}{{orderDetail.p_FreeTime}}{{langs.ordershowPG_describe2}}，{{langs.ordershowPG_describe3}}{{orderDetail.p_FreeTime}}{{langs.ordershowPG_describe4}}{{langs.money_unit}}{{orderDetail.p_Price}}{{langs.ordershowPG_describe5}}{{langs.money_unit}}{{orderDetail.p_Price_Max}}。
     </view>
   </view>
 </view>
