@@ -25,7 +25,7 @@
     <view class="smDes">
       <view>{{langs.showorderPG_yrq}}：{{langs.money_unit}}{{orderData.yajin}}</view>
       <view>{{langs.showorderPG_costfree}}：{{orderData.mianfei}}{{langs.secend}}</view>
-      <view>{{langs.showorderPG_counter}}：{{langs.count_rule1}}{{orderData.jifei}}{{langs.count_rule2}}{{langs.money_unit}}{{orderData.fengding}}</view>
+      <view>{{langs.showorderPG_counter}}：{{langs.count_rule1}}{{orderData.jifei}}HK${{langs.count_rule2}}{{langs.money_unit}}{{orderData.fengding}}</view>
     </view>
   </view>
 
